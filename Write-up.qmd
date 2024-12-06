@@ -66,6 +66,3 @@ We check the overall trend across markets with a shiny app. Due to technical iss
 * Expand the analysis to include other regions for comparative insights.
 * Econometric regression: control other macro-economic factors such as GNI and credit rating to focus on the impact of interest rate.
 * Check the negative effect of a reduction/alleviation of interest payment to prevent the moral hazard in African countries and protect the lenders from the risk of loan default.
-
-
-
