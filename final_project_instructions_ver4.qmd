@@ -1,0 +1,447 @@
+---
+title: "30538 Final Project: Reproducible Research"
+author: "Kohei Inagaki and Toshiyuki Kindaichi" 
+date: 12/6/2024
+format: pdf
+execute:
+  eval: false
+  echo: false
+---
+
+# Project Description and Instructions
+The goal of this project is to showcase your knowledge of Python by applying it to a research project about a policy topic you are interested in. You will be graded on coding, writeup, and an in-class presentation.
+
+You may work on this project alone, or in groups of up to three students. All groups must be formed declared in the Canvas proposal before any work is done - it is not possible to join one after. 
+
+It is required that you use GitHub, and we may use your past commits to understand your thought process for partial credit. If you working in a group, note that as we are grading we will be looking for multiple commits per individual throughout the project. The division of labor should be approximately evenly across both individuals. While we will lean toward giving the same grade for all group members, it is possible that individuals may receive different grades based on the commit history.
+
+If you choose to form a group, we recommend that you do so with other students in your section. You are allowed to have a group member from another section, but all group members must be available to attend all the group members' lecture sessions. If you are not present when your project is presented, you will not receive credit for the presentation.
+
+
+# Grading 
+## Coding (70%)
+The code for the project should have the following components:
+
+1. Data wrangling (25%)
+    * You must use a minimum of *two* datasets. 
+    * All processing of the data should be handled by your `.qmd` code, including all merging and reshaping. 
+2. Plotting (25%)
+    * From that data, you will create a minimum of *two* static plots using `altair` or `geopandas`
+    * As well as one `shiny` app with one dynamic plot
+        * You can also add additional dynamic plots into your app to substitute for a static plot. So, a `shiny` app with 3 dynamic plots will count for full credit.
+4. Reproductibility (10%)
+    * The project and files should be structured and documented so that the TAs can clone your repository and reproduce your results (see "Final Repository" below) by knitting your `.qmd` and, if needed, downloading the dataset(s) you use using the link provided in the `.qmd` comments
+5. Git (10%)
+    * You should submit your project as a Git repository.
+    * Create multiple branches as you work for different pieces of the analysis. Branches may correspond to work done by different partners or to different features if you are working alone.
+    * Your final repository should have one branch: `main`
+    * We reserve the right to check the git commit history to ensure that all members have contributed to the project.
+6. Extra credit: text processing (up to 10%)
+    * Introduce some form of text analysis using natural language processing methods discussed in class.
+
+## Writeup (15%)
+* You will then spend *no more than 3 pages* writing up your project. 
+* The primary purpose of this writeup is to inform us of what we are reading before we look at your code.
+* You should describe your research question, then discuss the approach you took and the coding involved, including discussing any weaknesses or difficulties encountered. 
+* Display your static plots, and briefly describe them and your Shiny app. Discuss the policy implications of your findings.
+* Finish with a discussion of directions for future work. 
+* The top of your writeup should include the names of all group members, their respective sections, and Github user names.
+
+## Presentation (15%)
+* On the day of the presentation, one of the group members will be *randomly selected* to give a *8-minute in-class presentation*. All group members must be present.
+* Any group member who is not present will receive an automatic 0 for the presentation portion of the final project.
+* The presentation will be of slides that largely mirror the structure of the writeup, but will be more focused on discussing the research question and results as opposed to explaining the details of the coding. 
+
+# Final Repository
+Your final repository must contain the following:
+
+* Documentation and Meta-data
+    * A `requirements.txt` file 
+    * A `.gitignore` file that ignores unneeded files (e.g. `venv`) 
+* Writeup: a user should be able to knit your `.qmd` file and re-generate the HTML version of your writeup
+    * The `.qmd` file associated with your write-up
+    * An HTML and PDF'd version of your writeup
+    * A folder named `pictures` that contains the files for any pictures required to knit your writeup
+* Data
+    * A folder named `data` that contains the initial, unmodified dataframes you download and the final versions of the dataframe(s) you built.
+    * If the dataset is greater than 100MB, it can hosted on Drive or Dropbox and the link should be provided in your .`qmd` file as a comment
+* Shiny app
+    * A folder named `shiny-app` that contains the code and any additional files needed to deploy your app
+    * A user should be able to deploy your app directly from the command line within this folder
+
+
+# Key Dates
+* By November 1
+    * Proposal submitted to Canvas quiz
+    * (Optional) meeting with Professor Ganong, Professor Shi, or Head TA Ozzy Houck
+    * Sign up for presentation slot
+* December 2- December 5: in-class presentations
+* December 7, 5PM: final repository submitted via Gradescope
+
+
+
+```{python}
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+import altair as alt
+```
+
+* Plotting of Debt Disbursements vs Debt Repayment by altair
+```{python}
+
+sub_file_path = 'data/Sub-Saharan Africa (excluding high income).csv'
+
+# Load data
+data_raw = pd.read_csv(sub_file_path)
+
+# Clean column names and data
+data_raw.columns = data_raw.columns.str.strip()
+data_raw["Year"] = data_raw["Year"].str.strip()
+
+# Convert non-numeric data to NaN and cast columns to numeric
+for col in data_raw.columns[1:]:
+    data_raw[col] = data_raw[col].replace('..', None).str.replace(',', '').astype(float)
+
+# Extract necessary indicators
+key_indicators = [
+    "Disbursements (long-term)",
+    "Principal repayments (long-term)",
+    "Interest payments (long-term)"
+]
+
+# Filter data based on key indicators
+selected_data = data_raw[data_raw["Year"].isin(key_indicators)].set_index("Year").transpose()
+
+# Fill missing values with 0
+selected_data.fillna(0, inplace=True)
+
+# Calculate total payments
+selected_data["Total Payments"] = (
+    selected_data["Principal repayments (long-term)"] + selected_data["Interest payments (long-term)"]
+)
+
+# Calculate Debt Repayment Ratio
+selected_data["Debt Repayment Ratio"] = (
+    selected_data["Total Payments"] / selected_data["Disbursements (long-term)"]
+)
+
+# Convert values to billions
+selected_data["Disbursements (long-term)"] /= 1e3
+selected_data["Total Payments"] /= 1e3
+
+# Data preparation for bar chart
+selected_data.reset_index(inplace=True)
+selected_data.rename(columns={"index": "Year"}, inplace=True)
+
+# Replace category names
+category_mapping = {
+    "Disbursements (long-term)": "Debt Disbursements",
+    "Total Payments": "Debt Payments"
+}
+
+melted_data = selected_data.melt(
+    id_vars="Year", 
+    value_vars=["Disbursements (long-term)", "Total Payments"],
+    var_name="Category", 
+    value_name="Value"
+)
+
+# Update category names
+melted_data["Category"] = melted_data["Category"].replace(category_mapping)
+
+# Create a bar chart (side by side)
+bar_chart = alt.Chart(melted_data).mark_bar().encode(
+    x=alt.X('Year:O', title="Year", axis=alt.Axis(labelAngle=-45)),  # Tilt Year labels by 45 degrees
+    xOffset='Category:N',  # Offset to align bars side by side
+    y=alt.Y('Value:Q', title="Amount ($ billions)"),
+    color=alt.Color('Category:N', legend=alt.Legend(title="Category")),
+    tooltip=['Year', 'Category', alt.Tooltip('Value:Q', format=",.1f")]
+)
+
+# Create a line chart (Debt Repayment Ratio)
+line_chart = alt.Chart(selected_data).mark_line(point=True).encode(
+    x=alt.X('Year:O', title="Year", axis=alt.Axis(labelAngle=-45)),  # Tilt Year labels by 45 degrees
+    y=alt.Y('Debt Repayment Ratio:Q', title="Debt Repayment Ratio", axis=alt.Axis(format='.0%')),
+    color=alt.value('red'),  # Set line color to red
+    tooltip=['Year', alt.Tooltip('Debt Repayment Ratio:Q', format=".1%")]
+)
+
+# Combine bar and line charts into a dual-axis chart
+chart = alt.layer(
+    bar_chart,
+    line_chart.encode(y=alt.Y('Debt Repayment Ratio:Q', title="Debt Repayment Ratio", axis=alt.Axis(orient="right", format=".1%")))
+).resolve_scale(
+    y='independent'  # Use independent Y-axis scales for the bar and line charts
+).properties(
+    width=400,  # Adjust width
+    height=300  # Adjust height
+).configure_legend(
+    orient='top-left',  # Place legend in the top-left corner
+    padding=-10,  # Reduce padding for a tighter layout
+    cornerRadius=1,  # Slightly round legend corners
+    fillColor='white',  # Set legend background to white
+    strokeWidth=0.1,  # Adjust legend border thickness
+    labelFontSize=10,  # Reduce font size for legend labels
+    titleFontSize=10  # Reduce font size for legend title
+).configure_title(
+    anchor='start',  # Align title to the left
+    fontSize=10,  # Set smaller font size for the title
+    dx=5,  # Adjust X position of the title
+    dy=-5  # Adjust Y position of the title (move closer to the chart)
+).properties(
+    title="Debt Disbursements vs Debt Repayment"
+)
+
+# Display the chart
+chart.show()
+
+
+
+```
+
+* Plotting of Disbursement breakdown by altair
+```{python}
+data_raw = pd.read_csv(sub_file_path) 
+
+# Clean column names and convert data
+data_raw.columns = data_raw.columns.str.strip()
+data_raw["Year"] = data_raw["Year"].str.strip()
+
+for col in data_raw.columns[1:]:
+    data_raw[col] = data_raw[col].replace('..', None).str.replace(',', '').astype(float)
+
+# Extract key indicators
+key_indicators = [
+    "Disbursements (long-term)", 
+    "Principal repayments (long-term)", 
+    "Interest payments (long-term)"
+]
+
+# Filter and reshape data
+selected_data = data_raw[data_raw["Year"].isin(key_indicators)].set_index("Year").transpose()
+selected_data.fillna(0, inplace=True)
+selected_data.reset_index(inplace=True)
+selected_data.rename(columns={"index": "Year"}, inplace=True)
+
+# Calculate Net Borrowing
+selected_data["Net Borrowing"] = (
+    selected_data["Disbursements (long-term)"] 
+    - selected_data["Principal repayments (long-term)"] 
+    - selected_data["Interest payments (long-term)"]
+)
+
+# Create `filtered_chart_data` (include Net Borrowing, exclude Disbursements)
+filtered_chart_data = selected_data.melt(
+    id_vars="Year",
+    value_vars=[
+        "Principal repayments (long-term)", 
+        "Interest payments (long-term)", 
+        "Net Borrowing"
+    ],
+    var_name="Category",
+    value_name="Amount"
+)
+
+# Convert Amount to billions
+filtered_chart_data["Amount"] /= 1e3  # Convert to billions
+
+# Create Altair chart
+grouped_chart = alt.Chart(filtered_chart_data).mark_bar().encode(
+    x=alt.X('Year:O', title='Year', axis=alt.Axis(labelAngle=-45)),
+    y=alt.Y('Amount:Q', title='Amount (in Billion USD)'),
+    color=alt.Color(
+        'Category:N', 
+        scale=alt.Scale(
+            domain=[
+                "Principal repayments (long-term)", 
+                "Interest payments (long-term)", 
+                "Net Borrowing"
+            ],
+            range=['#4575B4', '#D73027', '#1A9850']  # Blue, Red, Green
+        ),
+        legend=None  # Remove legend
+    ),
+    column=alt.Column(
+        'Category:N', 
+        title=None, 
+        sort=[
+            "Principal repayments (long-term)", 
+            "Interest payments (long-term)", 
+            "Net Borrowing"
+        ],
+        header=alt.Header(
+            labelFontSize=10,
+            labelFontWeight='bold',  # Set to bold
+            labelAlign='center'      # Center align
+        )
+    )
+).properties(
+    width=200,
+    height=300,
+    title=alt.TitleParams(
+        text='Breakdown of Debt Disbursements',
+        align='center',
+        anchor='middle',
+        fontSize=16
+    )
+)
+
+# Display chart
+grouped_chart.show()
+
+
+
+```
+
+* Data wrangling to create csv file for plotting head map and creating app
+```{python}
+
+# File paths
+raw_data_path = 'data/World bank raw data.csv'
+average_credit_rating_path = 'data/Average Credit Rating.csv'
+country_code_path = 'data/country_code.csv'
+shapefile_path = 'data/WB_countries_Admin0_10m.shp'
+# Path to save the final csv file
+final_output_path = 'data/all_data_verf.csv'
+
+
+# List of African country codes
+africa_country_codes = [
+    'DZA', 'AGO', 'BEN', 'BWA', 'BFA', 'BDI', 'CPV', 'CMR', 'CAF', 'TCD', 'COM', 'COG',
+    'CIV', 'COD', 'DJI', 'EGY', 'GNQ', 'ERI', 'SWZ', 'ETH', 'GAB', 'GMB', 'GHA', 'GIN',
+    'GNB', 'KEN', 'LSO', 'LBR', 'LBY', 'MDG', 'MWI', 'MLI', 'MRT', 'MUS', 'MYT', 'MAR',
+    'MOZ', 'NAM', 'NER', 'NGA', 'RWA', 'STP', 'SEN', 'SYC', 'SLE', 'SOM', 'ZAF', 'SSD',
+    'SDN', 'TZA', 'TGO', 'TUN', 'UGA', 'ZMB', 'ZWE'
+]
+
+# Mapping dictionary for country name standardization
+name_mapping = {
+    "Bahamas (the)": "Bahamas, The",
+    "Bolivia (Plurinational State of)": "Bolivia",
+    "Cayman Islands (the)": "Cayman Islands",
+    "Central African Republic (the)": "Central African Republic",
+    "Comoros (the)": "Comoros",
+    "Congo (the Democratic Republic of the)": "Congo, Dem. Rep.",
+    "Congo (the)": "Congo, Rep.",
+    "Curaçao": "Curacao",
+    "Côte d'Ivoire": "Cote d'Ivoire",
+    "Dominican Republic (the)": "Dominican Republic",
+    "Egypt": "Egypt, Arab Rep.",
+    "Faroe Islands (the)": "Faroe Islands",
+    "Gambia (the)": "Gambia, The",
+    "Hong Kong": "Hong Kong SAR, China",
+    "Iran (Islamic Republic of)": "Iran, Islamic Rep.",
+    "Korea (the Republic of)": "Korea, Rep.",
+    "Kyrgyzstan": "Kyrgyz Republic",
+    "Lao People's Democratic Republic (the)": "Lao PDR",
+    "Macao": "Macao SAR, China",
+    "Marshall Islands (the)": "Marshall Islands",
+    "Micronesia (Federated States of)": "Micronesia, Fed. Sts.",
+    "Moldova (the Republic of)": "Moldova",
+    "Netherlands (the)": "Netherlands",
+    "Niger (the)": "Niger",
+    "Northern Mariana Islands (the)": "Northern Mariana Islands",
+    "Palestine, State of": "Palestine, State of",
+    "Philippines (the)": "Philippines",
+    "Republic of North Macedonia": "North Macedonia",
+    "Russian Federation (the)": "Russian Federation",
+    "Saint Kitts and Nevis": "St. Kitts and Nevis",
+    "Saint Lucia": "St. Lucia",
+    "Saint Martin (French part)": "St. Martin (French part)",
+    "Saint Vincent and the Grenadines": "St. Vincent and the Grenadines",
+    "Slovakia": "Slovak Republic",
+    "Sudan (the)": "Sudan",
+    "Tanzania, United Republic of": "Tanzania",
+    "Turkey": "Turkiye",
+    "Turks and Caicos Islands (the)": "Turks and Caicos Islands",
+    "United Arab Emirates (the)": "United Arab Emirates",
+    "United Kingdom of Great Britain and Northern Ireland (the)": "United Kingdom",
+    "United States of America (the)": "United States",
+    "Venezuela (Bolivarian Republic of)": "Venezuela, RB",
+    "Yemen": "Yemen, Rep."
+}
+
+# Step 1: Process World Bank raw data
+WB_df = pd.read_csv(raw_data_path)
+WB_df.rename(columns={'Country Name': 'Country'}, inplace=True)
+WB_df['Africa'] = WB_df['Country Code'].apply(lambda code: 1 if code in africa_country_codes else 0)
+WB_df_long = pd.melt(WB_df, id_vars=['Country', 'Country Code', 'Africa'], 
+                  var_name='Year', value_name='Interest payments on external debt (% of GNI)')
+WB_df_long['Year'] = WB_df_long['Year'].str.extract('(\d+)')
+WB_df_long = WB_df_long.dropna(subset=['Year'])
+WB_df_long['Year'] = WB_df_long['Year'].astype(int)
+WB_df_long.rename(columns={'Country': 'Country_x'}, inplace=True)
+
+# Step 2: Add average credit rating
+credit_df = pd.read_csv(average_credit_rating_path)
+code_df = pd.read_csv(country_code_path)[['Country Name', 'Country Code']]
+credit_df['Country'] = credit_df['Country'].replace(name_mapping)
+credit_df = credit_df.merge(code_df, left_on="Country", right_on="Country Name", how="left")
+credit_df.drop(columns=["Country Name"], inplace=True)
+merged_WB_df_long = WB_df_long.merge(credit_df[['Country Code', 'Year', 'Average Credit Rating']], 
+                        on=['Country Code', 'Year'], how='left')
+
+# Step 3: Add continent data
+geo_data_gdf = gpd.read_file(shapefile_path)
+# Remove geometry data to shrink the data size when saving it as csv 
+geo_data_df = geo_data_gdf[["ISO_A3_EH", "CONTINENT"]] 
+geo_merged_WB_df_long = merged_WB_df_long.merge(geo_data_df, left_on="Country Code", right_on="ISO_A3_EH", how="left")
+geo_merged_WB_df_long.drop(columns=["ISO_A3_EH"], inplace=True)
+
+# Handle undesirable values in interest payments
+# Convert external debt data to numeric, replacing ".." with NaN
+geo_merged_WB_df_long["Interest payments on external debt (% of GNI)"] = pd.to_numeric(
+    geo_merged_WB_df_long["Interest payments on external debt (% of GNI)"], errors="coerce"
+)
+
+# Fill missing values with 0
+geo_merged_WB_df_long["Interest payments on external debt (% of GNI)"].fillna(0, inplace=True)
+
+# Save the final data
+
+geo_merged_WB_df_long.to_csv(final_output_path, index=False, encoding='utf-8-sig')
+
+print(f"The final processed file has been saved to: {final_output_path}")
+
+
+```
+
+
+* Ploting heat map with geodata
+```{python}
+
+# Re-define the dataframe for Africa by loading the CSV created
+df_africa = pd.read_csv('data/all_data_verf.csv')
+
+# Filter data for Africa and the year 2022
+df_africa_2022 = df_africa[(df_africa["CONTINENT"] == "Africa") & (df_africa["Year"] == 2022)]
+
+# Select geometry and code data from geodata for merging with df_africa_2022
+selected_gdf = geo_data_gdf[["ISO_A3_EH", "geometry"]]
+
+# Merge shapefile data with CSV data
+geo_df_africa_2022 = selected_gdf.merge(df_africa_2022, left_on="ISO_A3_EH", right_on="Country Code", how="left")
+
+# Plot the map
+fig, ax = plt.subplots(1, 1, figsize=(12, 12))
+
+# Plot data
+geo_df_africa_2022.plot(
+    column="Interest payments on external debt (% of GNI)",
+    cmap="OrRd",
+    legend=True,
+    legend_kwds={"label": "Interest Payments on External Debt (% of GNI)"},
+    edgecolor="black",
+    ax=ax,
+)
+
+# Add title and configure display
+ax.set_title("Interest Payments on External Debt (% of GNI) in Africa (2022)", fontsize=15)
+ax.axis("off")
+
+plt.show()
+
+```
+
+
