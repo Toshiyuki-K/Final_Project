@@ -1,0 +1,75 @@
+---
+title: "30538 Final Project: Rising Interest, Rising Burden: Debt Service Challenges in Africa"
+date: 12/6/2024
+format: pdf
+execute:
+  eval: false
+  echo: false
+---
+
+### Group Members
+
+* Kohei Inagaki|Section: 2|GitHub: Kohei1208|
+
+* Toshiyuki Kindaichi|Section 2|GitHub: Toshiyuki-K|
+
+### Research Question:
+* How do rising interest rates disproportionately affect African countries, and what policy measures can mitigate these challenges?
+* This study examines the factors contributing to the high debt-servicing burdens faced by African nations and evaluates potential policy solutions, such as interest rate reductions and debt restructuring, to address these challenges.
+
+### Approach and codings
+
+First, we check the external debt in African countries to see the current situation with static plots, and then compare interest-to-GNI for African data with other representative emerging and Non-African (all countries except for Africa) markets to see the potential factors that hinder the African economic development by calculating a weighted average of interest payment to consider the difference of credit risk.
+
+We retrieve from the International Debt Statistics and create a chart comparing annual borrowing (Disbursements) with annual repayments of principal and Interest Payment. Additionally, we calculated Net Borrowing (funds available for development). 
+
+Then, we created the shiny app to see the overall trend. Due to the technical error between Altair and shiny in our laptop system, we used Matplotlib. With a checkbox, you can choose Africa, Asia and South America markets, and overall Non-African market. The alphabetic credit ratings were converted to numbers, decreasing from a good rating (A) to a lower rating (C), ranging from 21 to 0. Plus, with a switch, you can compare individual country’s data for interest-to-GNI over time as a supplement for the static plot.
+
+### Data Sources:
+* World Bank Databank (World Development Indicators): Data on debt-to-GNI ratios, interest payments.
+* Credit Rating Data: Average credit ratings provided by major credit rating agencies. These ratings were quantified and obtained through internal access at the UNDP.
+* International Debt Statistics: Supplementary data on external debt and repayment.
+
+### Findings
+1. Static Plot
+
+* Debt Landscape (2012-2022)
+
+Annual borrowing in Africa (~$80 billion) is largely offset by repayments, limiting net financing for development.
+
+![](pictures/1_Debt_1.png){width=45% fig-align="left"} 
+![](pictures/2_Debt_2.png){width=55% fig-align="right"}
+
+* Interest Payments on External Debt (2022):
+
+Mozambique (13.9%) has experienced the heaviest burdens. Namibia and Libya lack data and are excluded from the plot to avoid the impact of imputing missing values.
+
+![](pictures/3_map.png){width=30% fig-align="left"} 
+![](pictures/4_individual_example_senegal.png){width=50% fig-align="right"}
+
+2. Dynamic Analysis (Shiny App)
+
+* Weighted Average Interest Rates
+
+African countries face a higher average (1.85%) compared to Asian countries (1.53%).
+
+* Credit Rating Comparison: 
+
+Within the same credit ratings, African countries consistently pay higher interest rates. For instance, BB-rated African countries face rates near 3%, compared to just over 1% for non-African peers.
+
+![](pictures/5_app_1.png){width=45% fig-align="left"} 
+![](pictures/6_app_2.png){width=45% fig-align="right"}
+
+### Policy Recommendations
+* Rate Reductions: Alleviate financial burdens and allow reallocation of funds toward infrastructure and economic development.
+* Targeted Support: IOs should prioritize Africa in their debt relief initiatives. 
+
+### Challenges
+* Data Availability: Inconsistent macro economic data across African countries.
+* Analytical Complexity: Difficulty in isolating the effects of external factors, such as commodity price fluctuations and geopolitical issues.
+
+### Future Research
+* Investigate the relationship between governance indicators and debt-servicing outcomes.
+* Conduct case studies on successful debt restructuring in Africa.
+* Expand the analysis to include other regions for comparative insights.
+
