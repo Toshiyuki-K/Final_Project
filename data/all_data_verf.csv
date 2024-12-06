@@ -11,7 +11,7 @@ Philippines,PHL,0,2000,3.288382418,11.0,Asia
 Samoa,WSM,0,2000,0.551974356,,Oceania
 Solomon Islands,SLB,0,2000,0.698510533,,Oceania
 Thailand,THA,0,2000,3.917915967,12.0,Asia
-Timor-Leste,TLS,0,2000,..,,Asia
+Timor-Leste,TLS,0,2000,0.0,,Asia
 Tonga,TON,0,2000,0.6143872,,Oceania
 Vanuatu,VUT,0,2000,0.737238724,,Oceania
 Viet Nam,VNM,0,2000,1.133282615,,Asia
@@ -22,10 +22,10 @@ Belarus,BLR,0,2000,1.012460438,,Europe
 Bosnia and Herzegovina,BIH,0,2000,2.110836356,,Europe
 Georgia,GEO,0,2000,1.861265391,,Asia
 Kazakhstan,KAZ,0,2000,4.637120342,9.0,Asia
-Kosovo,XKX,0,2000,..,,
+Kosovo,XKX,0,2000,0.0,,
 Kyrgyz Republic,KGZ,0,2000,6.274970323,,Asia
 Moldova,MDA,0,2000,5.553483951,6.0,Europe
-Montenegro,MNE,0,2000,..,,Europe
+Montenegro,MNE,0,2000,0.0,,Europe
 North Macedonia,MKD,0,2000,1.231028868,,Europe
 Serbia,SRB,0,2000,0.731284882,,Europe
 Tajikistan,TJK,0,2000,3.590987627,,Asia
@@ -55,19 +55,19 @@ Paraguay,PRY,0,2000,1.928880718,7.0,South America
 Peru,PER,0,2000,2.847253627,10.0,South America
 St. Lucia,LCA,0,2000,1.046702121,,North America
 St. Vincent and the Grenadines,VCT,0,2000,1.712305841,,North America
-Suriname,SUR,0,2000,..,,South America
+Suriname,SUR,0,2000,0.0,,South America
 Algeria,DZA,1,2000,3.191576097,,Africa
 Djibouti,DJI,1,2000,0.780465115,,Africa
 "Egypt, Arab Rep.",EGY,1,2000,0.73834241,12.0,Africa
 "Iran, Islamic Rep.",IRN,0,2000,0.571104873,,Asia
-Iraq,IRQ,0,2000,..,,Asia
+Iraq,IRQ,0,2000,0.0,,Asia
 Jordan,JOR,0,2000,5.889686467,9.0,Asia
 Lebanon,LBN,0,2000,3.453083279,9.0,Asia
 Morocco,MAR,1,2000,2.557027506,11.0,Africa
-Syrian Arab Republic,SYR,0,2000,..,,Asia
+Syrian Arab Republic,SYR,0,2000,0.0,,Asia
 Tunisia,TUN,1,2000,2.788893745,12.0,Africa
 "Yemen, Rep.",YEM,0,2000,1.037775061,,Asia
-Afghanistan,AFG,0,2000,..,,Asia
+Afghanistan,AFG,0,2000,0.0,,Asia
 Bangladesh,BGD,0,2000,0.358633088,,Asia
 Bhutan,BTN,0,2000,0.502914358,,Asia
 India,IND,0,2000,0.910035094,11.0,Asia
@@ -106,7 +106,7 @@ Mauritania,MRT,1,2000,1.783047943,,Africa
 Mauritius,MUS,1,2000,1.118139188,13.0,Seven seas (open ocean)
 Mozambique,MOZ,1,2000,0.823414385,,Africa
 Niger,NER,1,2000,0.459790731,,Africa
-Nigeria,NGA,1,2000,..,,Africa
+Nigeria,NGA,1,2000,0.0,,Africa
 Rwanda,RWA,1,2000,0.591881324,,Africa
 Sao Tome and Principe,STP,1,2000,3.094219605,,Africa
 Senegal,SEN,1,2000,1.313796029,8.0,Africa
@@ -119,11 +119,11 @@ Togo,TGO,1,2000,0.526448182,,Africa
 Uganda,UGA,1,2000,0.458414545,,Africa
 Zambia,ZMB,1,2000,2.665394126,,Africa
 Zimbabwe,ZWE,1,2000,3.216983848,,Africa
-,,0,2000,,,
-,,0,2000,,,
-,,0,2000,,,
-,,0,2000,,,
-,,0,2000,,,
+,,0,2000,0.0,,
+,,0,2000,0.0,,
+,,0,2000,0.0,,
+,,0,2000,0.0,,
+,,0,2000,0.0,,
 Cambodia,KHM,0,2001,0.143945171,,Asia
 China,CHN,0,2001,0.605217261,15.0,Asia
 Fiji,FJI,0,2001,0.466481557,10.0,Oceania
@@ -136,7 +136,7 @@ Philippines,PHL,0,2001,3.946722882,11.0,Asia
 Samoa,WSM,0,2001,0.508216464,,Oceania
 Solomon Islands,SLB,0,2001,0.627258324,,Oceania
 Thailand,THA,0,2001,2.82655256,12.0,Asia
-Timor-Leste,TLS,0,2001,..,,Asia
+Timor-Leste,TLS,0,2001,0.0,,Asia
 Tonga,TON,0,2001,0.456885378,,Oceania
 Vanuatu,VUT,0,2001,0.464508378,,Oceania
 Viet Nam,VNM,0,2001,1.187590044,,Asia
@@ -147,10 +147,10 @@ Belarus,BLR,0,2001,0.968039037,,Europe
 Bosnia and Herzegovina,BIH,0,2001,1.686218201,,Europe
 Georgia,GEO,0,2001,1.196660193,,Asia
 Kazakhstan,KAZ,0,2001,3.522913266,10.0,Asia
-Kosovo,XKX,0,2001,..,,
+Kosovo,XKX,0,2001,0.0,,
 Kyrgyz Republic,KGZ,0,2001,3.493900184,,Asia
 Moldova,MDA,0,2001,4.497634463,4.0,Europe
-Montenegro,MNE,0,2001,..,,Europe
+Montenegro,MNE,0,2001,0.0,,Europe
 North Macedonia,MKD,0,2001,1.629061464,,Europe
 Serbia,SRB,0,2001,0.597739305,,Europe
 Tajikistan,TJK,0,2001,2.432153454,,Asia
@@ -180,19 +180,19 @@ Paraguay,PRY,0,2001,1.945738314,7.0,South America
 Peru,PER,0,2001,2.658743044,9.0,South America
 St. Lucia,LCA,0,2001,1.346224459,,North America
 St. Vincent and the Grenadines,VCT,0,2001,1.201489691,,North America
-Suriname,SUR,0,2001,..,,South America
+Suriname,SUR,0,2001,0.0,,South America
 Algeria,DZA,1,2001,2.460445658,,Africa
 Djibouti,DJI,1,2001,0.575144426,,Africa
 "Egypt, Arab Rep.",EGY,1,2001,0.895739965,12.0,Africa
 "Iran, Islamic Rep.",IRN,0,2001,0.340140748,,Asia
-Iraq,IRQ,0,2001,..,,Asia
+Iraq,IRQ,0,2001,0.0,,Asia
 Jordan,JOR,0,2001,5.465946483,9.0,Asia
 Lebanon,LBN,0,2001,4.516071675,7.0,Asia
 Morocco,MAR,1,2001,2.352766694,11.0,Africa
-Syrian Arab Republic,SYR,0,2001,..,,Asia
+Syrian Arab Republic,SYR,0,2001,0.0,,Asia
 Tunisia,TUN,1,2001,2.393996829,13.0,Africa
 "Yemen, Rep.",YEM,0,2001,0.822609505,,Asia
-Afghanistan,AFG,0,2001,..,,Asia
+Afghanistan,AFG,0,2001,0.0,,Asia
 Bangladesh,BGD,0,2001,0.326451262,,Asia
 Bhutan,BTN,0,2001,0.38979611,,Asia
 India,IND,0,2001,0.921940759,10.5,Asia
@@ -231,7 +231,7 @@ Mauritania,MRT,1,2001,1.675695136,,Africa
 Mauritius,MUS,1,2001,0.806973723,13.0,Seven seas (open ocean)
 Mozambique,MOZ,1,2001,1.834641268,,Africa
 Niger,NER,1,2001,0.307470781,,Africa
-Nigeria,NGA,1,2001,..,,Africa
+Nigeria,NGA,1,2001,0.0,,Africa
 Rwanda,RWA,1,2001,0.394139729,,Africa
 Sao Tome and Principe,STP,1,2001,2.578352299,,Africa
 Senegal,SEN,1,2001,1.032436138,8.0,Africa
@@ -244,11 +244,11 @@ Togo,TGO,1,2001,0.568326181,,Africa
 Uganda,UGA,1,2001,0.325489315,,Africa
 Zambia,ZMB,1,2001,1.506772136,,Africa
 Zimbabwe,ZWE,1,2001,1.182442712,,Africa
-,,0,2001,,,
-,,0,2001,,,
-,,0,2001,,,
-,,0,2001,,,
-,,0,2001,,,
+,,0,2001,0.0,,
+,,0,2001,0.0,,
+,,0,2001,0.0,,
+,,0,2001,0.0,,
+,,0,2001,0.0,,
 Cambodia,KHM,0,2002,0.168883569,,Asia
 China,CHN,0,2002,0.438107993,15.0,Asia
 Fiji,FJI,0,2002,0.409938193,10.0,Oceania
@@ -261,7 +261,7 @@ Philippines,PHL,0,2002,3.407110342,11.0,Asia
 Samoa,WSM,0,2002,0.469414907,,Oceania
 Solomon Islands,SLB,0,2002,0.701694908,,Oceania
 Thailand,THA,0,2002,1.972857795,12.0,Asia
-Timor-Leste,TLS,0,2002,..,,Asia
+Timor-Leste,TLS,0,2002,0.0,,Asia
 Tonga,TON,0,2002,0.474080334,,Oceania
 Vanuatu,VUT,0,2002,0.566533847,,Oceania
 Viet Nam,VNM,0,2002,0.86723296,,Asia
@@ -272,10 +272,10 @@ Belarus,BLR,0,2002,0.679254728,,Europe
 Bosnia and Herzegovina,BIH,0,2002,1.196777323,,Europe
 Georgia,GEO,0,2002,1.372078758,,Asia
 Kazakhstan,KAZ,0,2002,3.077665934,11.5,Asia
-Kosovo,XKX,0,2002,..,,
+Kosovo,XKX,0,2002,0.0,,
 Kyrgyz Republic,KGZ,0,2002,2.051057986,,Asia
 Moldova,MDA,0,2002,3.390034295,2.0,Europe
-Montenegro,MNE,0,2002,..,,Europe
+Montenegro,MNE,0,2002,0.0,,Europe
 North Macedonia,MKD,0,2002,1.323221963,,Europe
 Serbia,SRB,0,2002,0.928754214,,Europe
 Tajikistan,TJK,0,2002,1.541974406,,Asia
@@ -305,19 +305,19 @@ Paraguay,PRY,0,2002,1.687994123,7.0,South America
 Peru,PER,0,2002,2.375033522,9.0,South America
 St. Lucia,LCA,0,2002,1.263670796,,North America
 St. Vincent and the Grenadines,VCT,0,2002,0.932510587,,North America
-Suriname,SUR,0,2002,..,,South America
+Suriname,SUR,0,2002,0.0,,South America
 Algeria,DZA,1,2002,2.059534766,,Africa
 Djibouti,DJI,1,2002,0.546703201,,Africa
 "Egypt, Arab Rep.",EGY,1,2002,0.938776082,11.5,Africa
 "Iran, Islamic Rep.",IRN,0,2002,0.307995414,8.0,Asia
-Iraq,IRQ,0,2002,..,,Asia
+Iraq,IRQ,0,2002,0.0,,Asia
 Jordan,JOR,0,2002,3.309632135,9.0,Asia
 Lebanon,LBN,0,2002,5.961959234,7.0,Asia
 Morocco,MAR,1,2002,2.421343083,11.0,Africa
-Syrian Arab Republic,SYR,0,2002,..,,Asia
+Syrian Arab Republic,SYR,0,2002,0.0,,Asia
 Tunisia,TUN,1,2002,2.518663557,13.0,Africa
 "Yemen, Rep.",YEM,0,2002,0.626180184,,Asia
-Afghanistan,AFG,0,2002,..,,Asia
+Afghanistan,AFG,0,2002,0.0,,Asia
 Bangladesh,BGD,0,2002,0.304912463,,Asia
 Bhutan,BTN,0,2002,0.378643332,,Asia
 India,IND,0,2002,0.828654515,10.5,Asia
@@ -356,7 +356,7 @@ Mauritania,MRT,1,2002,0.99413892,,Africa
 Mauritius,MUS,1,2002,0.873630926,13.0,Seven seas (open ocean)
 Mozambique,MOZ,1,2002,2.304135864,,Africa
 Niger,NER,1,2002,0.302349757,,Africa
-Nigeria,NGA,1,2002,..,,Africa
+Nigeria,NGA,1,2002,0.0,,Africa
 Rwanda,RWA,1,2002,0.380427348,,Africa
 Sao Tome and Principe,STP,1,2002,2.707630871,,Africa
 Senegal,SEN,1,2002,1.077431625,8.0,Africa
@@ -369,11 +369,11 @@ Togo,TGO,1,2002,0.158550338,,Africa
 Uganda,UGA,1,2002,0.429495042,,Africa
 Zambia,ZMB,1,2002,1.574551396,,Africa
 Zimbabwe,ZWE,1,2002,1.364462907,,Africa
-,,0,2002,,,
-,,0,2002,,,
-,,0,2002,,,
-,,0,2002,,,
-,,0,2002,,,
+,,0,2002,0.0,,
+,,0,2002,0.0,,
+,,0,2002,0.0,,
+,,0,2002,0.0,,
+,,0,2002,0.0,,
 Cambodia,KHM,0,2003,0.200124122,,Asia
 China,CHN,0,2003,0.439401807,15.5,Asia
 Fiji,FJI,0,2003,0.290032243,10.0,Oceania
@@ -386,7 +386,7 @@ Philippines,PHL,0,2003,3.005264676,10.0,Asia
 Samoa,WSM,0,2003,0.436973946,,Oceania
 Solomon Islands,SLB,0,2003,0.943024914,,Oceania
 Thailand,THA,0,2003,1.450578865,13.5,Asia
-Timor-Leste,TLS,0,2003,..,,Asia
+Timor-Leste,TLS,0,2003,0.0,,Asia
 Tonga,TON,0,2003,0.490386573,,Oceania
 Vanuatu,VUT,0,2003,0.489369546,,Oceania
 Viet Nam,VNM,0,2003,0.746115348,,Asia
@@ -397,10 +397,10 @@ Belarus,BLR,0,2003,0.534922761,,Europe
 Bosnia and Herzegovina,BIH,0,2003,1.080761592,,Europe
 Georgia,GEO,0,2003,1.133150013,,Asia
 Kazakhstan,KAZ,0,2003,2.738317066,11.0,Asia
-Kosovo,XKX,0,2003,..,,
+Kosovo,XKX,0,2003,0.0,,
 Kyrgyz Republic,KGZ,0,2003,1.642542698,,Asia
 Moldova,MDA,0,2003,2.354623422,5.5,Europe
-Montenegro,MNE,0,2003,..,,Europe
+Montenegro,MNE,0,2003,0.0,,Europe
 North Macedonia,MKD,0,2003,1.062158651,,Europe
 Serbia,SRB,0,2003,1.080335642,,Europe
 Tajikistan,TJK,0,2003,1.201301778,,Asia
@@ -430,19 +430,19 @@ Paraguay,PRY,0,2003,1.758096306,5.0,South America
 Peru,PER,0,2003,2.473850496,9.0,South America
 St. Lucia,LCA,0,2003,1.546395439,,North America
 St. Vincent and the Grenadines,VCT,0,2003,0.93833034,,North America
-Suriname,SUR,0,2003,..,,South America
+Suriname,SUR,0,2003,0.0,,South America
 Algeria,DZA,1,2003,1.532998599,,Africa
 Djibouti,DJI,1,2003,0.525276935,,Africa
 "Egypt, Arab Rep.",EGY,1,2003,0.853275403,11.0,Africa
 "Iran, Islamic Rep.",IRN,0,2003,0.247648363,8.0,Asia
-Iraq,IRQ,0,2003,..,,Asia
+Iraq,IRQ,0,2003,0.0,,Asia
 Jordan,JOR,0,2003,2.521540888,10.0,Asia
 Lebanon,LBN,0,2003,8.763247221,7.0,Asia
 Morocco,MAR,1,2003,2.321560592,11.0,Africa
-Syrian Arab Republic,SYR,0,2003,..,,Asia
+Syrian Arab Republic,SYR,0,2003,0.0,,Asia
 Tunisia,TUN,1,2003,2.322929561,13.0,Africa
 "Yemen, Rep.",YEM,0,2003,0.543054925,,Asia
-Afghanistan,AFG,0,2003,..,,Asia
+Afghanistan,AFG,0,2003,0.0,,Asia
 Bangladesh,BGD,0,2003,0.278575616,,Asia
 Bhutan,BTN,0,2003,0.394767853,,Asia
 India,IND,0,2003,0.920433554,11.0,Asia
@@ -481,7 +481,7 @@ Mauritania,MRT,1,2003,0.767077628,,Africa
 Mauritius,MUS,1,2003,0.99181083,13.0,Seven seas (open ocean)
 Mozambique,MOZ,1,2003,2.266652483,7.0,Africa
 Niger,NER,1,2003,0.323135795,,Africa
-Nigeria,NGA,1,2003,..,,Africa
+Nigeria,NGA,1,2003,0.0,,Africa
 Rwanda,RWA,1,2003,0.407784232,,Africa
 Sao Tome and Principe,STP,1,2003,2.257423792,,Africa
 Senegal,SEN,1,2003,0.906295595,8.0,Africa
@@ -494,11 +494,11 @@ Togo,TGO,1,2003,0.133593996,,Africa
 Uganda,UGA,1,2003,0.431472604,,Africa
 Zambia,ZMB,1,2003,3.810571519,,Africa
 Zimbabwe,ZWE,1,2003,0.39046406,,Africa
-,,0,2003,,,
-,,0,2003,,,
-,,0,2003,,,
-,,0,2003,,,
-,,0,2003,,,
+,,0,2003,0.0,,
+,,0,2003,0.0,,
+,,0,2003,0.0,,
+,,0,2003,0.0,,
+,,0,2003,0.0,,
 Cambodia,KHM,0,2004,0.235008106,,Asia
 China,CHN,0,2004,0.358458656,15.5,Asia
 Fiji,FJI,0,2004,0.241957881,10.0,Oceania
@@ -511,7 +511,7 @@ Philippines,PHL,0,2004,3.628994175,10.0,Asia
 Samoa,WSM,0,2004,0.420481132,,Oceania
 Solomon Islands,SLB,0,2004,1.3471915,,Oceania
 Thailand,THA,0,2004,1.01060681,13.5,Asia
-Timor-Leste,TLS,0,2004,..,,Asia
+Timor-Leste,TLS,0,2004,0.0,,Asia
 Tonga,TON,0,2004,0.479050802,,Oceania
 Vanuatu,VUT,0,2004,0.702966042,,Oceania
 Viet Nam,VNM,0,2004,0.780844312,,Asia
@@ -522,10 +522,10 @@ Belarus,BLR,0,2004,0.549047225,,Europe
 Bosnia and Herzegovina,BIH,0,2004,1.181807696,6.0,Europe
 Georgia,GEO,0,2004,0.747817452,,Asia
 Kazakhstan,KAZ,0,2004,2.264474708,12.0,Asia
-Kosovo,XKX,0,2004,..,,
+Kosovo,XKX,0,2004,0.0,,
 Kyrgyz Republic,KGZ,0,2004,1.830071768,,Asia
 Moldova,MDA,0,2004,2.622755416,5.5,Europe
-Montenegro,MNE,0,2004,..,,Europe
+Montenegro,MNE,0,2004,0.0,,Europe
 North Macedonia,MKD,0,2004,1.570346898,,Europe
 Serbia,SRB,0,2004,1.207135901,,Europe
 Tajikistan,TJK,0,2004,1.353624947,,Asia
@@ -555,19 +555,19 @@ Paraguay,PRY,0,2004,2.075833606,5.0,South America
 Peru,PER,0,2004,2.330578631,9.5,South America
 St. Lucia,LCA,0,2004,1.394423226,,North America
 St. Vincent and the Grenadines,VCT,0,2004,1.241904124,,North America
-Suriname,SUR,0,2004,..,7.5,South America
+Suriname,SUR,0,2004,0.0,7.5,South America
 Algeria,DZA,1,2004,1.174222649,,Africa
 Djibouti,DJI,1,2004,0.893606802,,Africa
 "Egypt, Arab Rep.",EGY,1,2004,0.960117549,11.0,Africa
 "Iran, Islamic Rep.",IRN,0,2004,0.362008772,9.0,Asia
-Iraq,IRQ,0,2004,..,,Asia
+Iraq,IRQ,0,2004,0.0,,Asia
 Jordan,JOR,0,2004,3.397414203,10.0,Asia
 Lebanon,LBN,0,2004,7.207319699,7.0,Asia
 Morocco,MAR,1,2004,0.948775209,11.0,Africa
-Syrian Arab Republic,SYR,0,2004,..,,Asia
+Syrian Arab Republic,SYR,0,2004,0.0,,Asia
 Tunisia,TUN,1,2004,2.470307793,13.0,Africa
 "Yemen, Rep.",YEM,0,2004,0.556744181,,Asia
-Afghanistan,AFG,0,2004,..,,Asia
+Afghanistan,AFG,0,2004,0.0,,Asia
 Bangladesh,BGD,0,2004,0.296551747,,Asia
 Bhutan,BTN,0,2004,0.757029684,,Asia
 India,IND,0,2004,0.631403478,11.5,Asia
@@ -606,7 +606,7 @@ Mauritania,MRT,1,2004,0.865240867,,Africa
 Mauritius,MUS,1,2004,0.780931153,13.0,Seven seas (open ocean)
 Mozambique,MOZ,1,2004,2.135972827,7.0,Africa
 Niger,NER,1,2004,0.347381667,,Africa
-Nigeria,NGA,1,2004,..,,Africa
+Nigeria,NGA,1,2004,0.0,,Africa
 Rwanda,RWA,1,2004,0.530501422,,Africa
 Sao Tome and Principe,STP,1,2004,2.364366953,,Africa
 Senegal,SEN,1,2004,0.74760681,8.0,Africa
@@ -619,11 +619,11 @@ Togo,TGO,1,2004,0.096359866,,Africa
 Uganda,UGA,1,2004,0.487695675,,Africa
 Zambia,ZMB,1,2004,1.322588105,,Africa
 Zimbabwe,ZWE,1,2004,0.739418144,,Africa
-,,0,2004,,,
-,,0,2004,,,
-,,0,2004,,,
-,,0,2004,,,
-,,0,2004,,,
+,,0,2004,0.0,,
+,,0,2004,0.0,,
+,,0,2004,0.0,,
+,,0,2004,0.0,,
+,,0,2004,0.0,,
 Cambodia,KHM,0,2005,0.221736873,,Asia
 China,CHN,0,2005,0.289042778,16.0,Asia
 Fiji,FJI,0,2005,0.216772744,10.0,Oceania
@@ -636,7 +636,7 @@ Philippines,PHL,0,2005,2.936628532,9.333333333,Asia
 Samoa,WSM,0,2005,0.351235327,,Oceania
 Solomon Islands,SLB,0,2005,0.731294443,,Oceania
 Thailand,THA,0,2005,0.874013919,14.0,Asia
-Timor-Leste,TLS,0,2005,..,,Asia
+Timor-Leste,TLS,0,2005,0.0,,Asia
 Tonga,TON,0,2005,0.583576766,,Oceania
 Vanuatu,VUT,0,2005,0.617104054,,Oceania
 Viet Nam,VNM,0,2005,0.728270105,,Asia
@@ -647,10 +647,10 @@ Belarus,BLR,0,2005,0.599244677,,Europe
 Bosnia and Herzegovina,BIH,0,2005,1.503506416,6.0,Europe
 Georgia,GEO,0,2005,0.582567194,,Asia
 Kazakhstan,KAZ,0,2005,3.376624726,13.0,Asia
-Kosovo,XKX,0,2005,..,,
+Kosovo,XKX,0,2005,0.0,,
 Kyrgyz Republic,KGZ,0,2005,1.621710559,,Asia
 Moldova,MDA,0,2005,2.09409861,5.5,Europe
-Montenegro,MNE,0,2005,..,,Europe
+Montenegro,MNE,0,2005,0.0,,Europe
 North Macedonia,MKD,0,2005,1.50879064,10.0,Europe
 Serbia,SRB,0,2005,1.694209399,9.0,Europe
 Tajikistan,TJK,0,2005,0.632058356,,Asia
@@ -680,19 +680,19 @@ Paraguay,PRY,0,2005,1.549975728,5.0,South America
 Peru,PER,0,2005,2.583193963,10.0,South America
 St. Lucia,LCA,0,2005,1.661180405,,North America
 St. Vincent and the Grenadines,VCT,0,2005,1.487189956,,North America
-Suriname,SUR,0,2005,..,7.5,South America
+Suriname,SUR,0,2005,0.0,7.5,South America
 Algeria,DZA,1,2005,0.905417618,,Africa
 Djibouti,DJI,1,2005,0.808374828,,Africa
 "Egypt, Arab Rep.",EGY,1,2005,0.794261785,11.0,Africa
 "Iran, Islamic Rep.",IRN,0,2005,0.469992413,9.0,Asia
-Iraq,IRQ,0,2005,..,,Asia
+Iraq,IRQ,0,2005,0.0,,Asia
 Jordan,JOR,0,2005,3.41809111,10.0,Asia
 Lebanon,LBN,0,2005,6.865631334,6.0,Asia
 Morocco,MAR,1,2005,0.86824613,11.0,Africa
-Syrian Arab Republic,SYR,0,2005,..,,Asia
+Syrian Arab Republic,SYR,0,2005,0.0,,Asia
 Tunisia,TUN,1,2005,2.778871993,13.0,Africa
 "Yemen, Rep.",YEM,0,2005,0.420493724,,Asia
-Afghanistan,AFG,0,2005,..,,Asia
+Afghanistan,AFG,0,2005,0.0,,Asia
 Bangladesh,BGD,0,2005,0.327015295,,Asia
 Bhutan,BTN,0,2005,0.292179538,,Asia
 India,IND,0,2005,0.557270914,11.5,Asia
@@ -731,7 +731,7 @@ Mauritania,MRT,1,2005,0.781177293,,Africa
 Mauritius,MUS,1,2005,0.65081658,13.0,Seven seas (open ocean)
 Mozambique,MOZ,1,2005,1.961616568,7.0,Africa
 Niger,NER,1,2005,0.296782437,,Africa
-Nigeria,NGA,1,2005,..,,Africa
+Nigeria,NGA,1,2005,0.0,,Africa
 Rwanda,RWA,1,2005,0.39184657,,Africa
 Sao Tome and Principe,STP,1,2005,1.567594433,,Africa
 Senegal,SEN,1,2005,0.534540759,8.0,Africa
@@ -744,11 +744,11 @@ Togo,TGO,1,2005,0.065023574,,Africa
 Uganda,UGA,1,2005,0.409944989,7.0,Africa
 Zambia,ZMB,1,2005,0.892869628,,Africa
 Zimbabwe,ZWE,1,2005,0.979882667,,Africa
-,,0,2005,,,
-,,0,2005,,,
-,,0,2005,,,
-,,0,2005,,,
-,,0,2005,,,
+,,0,2005,0.0,,
+,,0,2005,0.0,,
+,,0,2005,0.0,,
+,,0,2005,0.0,,
+,,0,2005,0.0,,
 Cambodia,KHM,0,2006,0.200930556,,Asia
 China,CHN,0,2006,0.342859643,16.0,Asia
 Fiji,FJI,0,2006,0.236334035,10.0,Oceania
@@ -761,7 +761,7 @@ Philippines,PHL,0,2006,2.763795332,10.0,Asia
 Samoa,WSM,0,2006,0.460776799,,Oceania
 Solomon Islands,SLB,0,2006,0.24834588,,Oceania
 Thailand,THA,0,2006,0.871750599,14.0,Asia
-Timor-Leste,TLS,0,2006,..,,Asia
+Timor-Leste,TLS,0,2006,0.0,,Asia
 Tonga,TON,0,2006,0.410371317,,Oceania
 Vanuatu,VUT,0,2006,0.57628762,,Oceania
 Viet Nam,VNM,0,2006,0.703577053,,Asia
@@ -772,7 +772,7 @@ Belarus,BLR,0,2006,0.73295155,,Europe
 Bosnia and Herzegovina,BIH,0,2006,1.866442421,7.0,Europe
 Georgia,GEO,0,2006,0.879953276,,Asia
 Kazakhstan,KAZ,0,2006,3.236975102,13.0,Asia
-Kosovo,XKX,0,2006,..,,
+Kosovo,XKX,0,2006,0.0,,
 Kyrgyz Republic,KGZ,0,2006,1.289443956,,Asia
 Moldova,MDA,0,2006,2.175221956,5.5,Europe
 Montenegro,MNE,0,2006,1.068876289,,Europe
@@ -805,16 +805,16 @@ Paraguay,PRY,0,2006,1.260702998,5.0,South America
 Peru,PER,0,2006,2.458754771,11.0,South America
 St. Lucia,LCA,0,2006,1.342958459,,North America
 St. Vincent and the Grenadines,VCT,0,2006,1.816408765,,North America
-Suriname,SUR,0,2006,..,7.5,South America
+Suriname,SUR,0,2006,0.0,7.5,South America
 Algeria,DZA,1,2006,0.534675339,,Africa
 Djibouti,DJI,1,2006,0.972962873,,Africa
 "Egypt, Arab Rep.",EGY,1,2006,0.793580756,11.0,Africa
 "Iran, Islamic Rep.",IRN,0,2006,0.429860776,8.5,Asia
-Iraq,IRQ,0,2006,..,,Asia
+Iraq,IRQ,0,2006,0.0,,Asia
 Jordan,JOR,0,2006,3.71901357,10.0,Asia
 Lebanon,LBN,0,2006,6.838258343,6.0,Asia
 Morocco,MAR,1,2006,0.824491802,11.0,Africa
-Syrian Arab Republic,SYR,0,2006,..,,Asia
+Syrian Arab Republic,SYR,0,2006,0.0,,Asia
 Tunisia,TUN,1,2006,2.713878275,13.0,Africa
 "Yemen, Rep.",YEM,0,2006,0.424047764,,Asia
 Afghanistan,AFG,0,2006,0.104237502,,Asia
@@ -856,7 +856,7 @@ Mauritania,MRT,1,2006,0.663261869,,Africa
 Mauritius,MUS,1,2006,0.691078601,13.0,Seven seas (open ocean)
 Mozambique,MOZ,1,2006,2.467656149,7.0,Africa
 Niger,NER,1,2006,0.215290627,,Africa
-Nigeria,NGA,1,2006,..,9.0,Africa
+Nigeria,NGA,1,2006,0.0,9.0,Africa
 Rwanda,RWA,1,2006,0.273114944,6.0,Africa
 Sao Tome and Principe,STP,1,2006,1.327342993,,Africa
 Senegal,SEN,1,2006,0.647634311,8.0,Africa
@@ -869,11 +869,11 @@ Togo,TGO,1,2006,0.152854918,,Africa
 Uganda,UGA,1,2006,0.308725163,7.0,Africa
 Zambia,ZMB,1,2006,0.497044696,,Africa
 Zimbabwe,ZWE,1,2006,2.038135729,,Africa
-,,0,2006,,,
-,,0,2006,,,
-,,0,2006,,,
-,,0,2006,,,
-,,0,2006,,,
+,,0,2006,0.0,,
+,,0,2006,0.0,,
+,,0,2006,0.0,,
+,,0,2006,0.0,,
+,,0,2006,0.0,,
 Cambodia,KHM,0,2007,0.177148247,7.5,Asia
 China,CHN,0,2007,0.322312888,17.0,Asia
 Fiji,FJI,0,2007,0.562801793,10.0,Oceania
@@ -886,7 +886,7 @@ Philippines,PHL,0,2007,2.093771842,10.0,Asia
 Samoa,WSM,0,2007,0.317162416,,Oceania
 Solomon Islands,SLB,0,2007,0.489102694,,Oceania
 Thailand,THA,0,2007,0.667167992,14.0,Asia
-Timor-Leste,TLS,0,2007,..,,Asia
+Timor-Leste,TLS,0,2007,0.0,,Asia
 Tonga,TON,0,2007,0.485014023,,Oceania
 Vanuatu,VUT,0,2007,0.514372823,,Oceania
 Viet Nam,VNM,0,2007,0.807445372,,Asia
@@ -897,7 +897,7 @@ Belarus,BLR,0,2007,0.763444703,8.0,Europe
 Bosnia and Herzegovina,BIH,0,2007,1.849780928,7.0,Europe
 Georgia,GEO,0,2007,0.728869989,9.0,Asia
 Kazakhstan,KAZ,0,2007,3.902684629,13.0,Asia
-Kosovo,XKX,0,2007,..,,
+Kosovo,XKX,0,2007,0.0,,
 Kyrgyz Republic,KGZ,0,2007,1.137718349,,Asia
 Moldova,MDA,0,2007,2.200080405,6.0,Europe
 Montenegro,MNE,0,2007,1.592211396,,Europe
@@ -930,16 +930,16 @@ Paraguay,PRY,0,2007,0.986501024,5.0,South America
 Peru,PER,0,2007,2.430025853,10.5,South America
 St. Lucia,LCA,0,2007,1.631469622,,North America
 St. Vincent and the Grenadines,VCT,0,2007,1.372213091,8.0,North America
-Suriname,SUR,0,2007,..,7.5,South America
+Suriname,SUR,0,2007,0.0,7.5,South America
 Algeria,DZA,1,2007,0.164331955,,Africa
 Djibouti,DJI,1,2007,1.240863351,,Africa
 "Egypt, Arab Rep.",EGY,1,2007,0.702368246,11.0,Africa
 "Iran, Islamic Rep.",IRN,0,2007,0.26280898,8.5,Asia
-Iraq,IRQ,0,2007,..,,Asia
+Iraq,IRQ,0,2007,0.0,,Asia
 Jordan,JOR,0,2007,3.49594099,10.0,Asia
 Lebanon,LBN,0,2007,6.521430339,6.0,Asia
 Morocco,MAR,1,2007,0.807936904,12.0,Africa
-Syrian Arab Republic,SYR,0,2007,..,,Asia
+Syrian Arab Republic,SYR,0,2007,0.0,,Asia
 Tunisia,TUN,1,2007,2.523844418,13.0,Africa
 "Yemen, Rep.",YEM,0,2007,0.363218233,,Asia
 Afghanistan,AFG,0,2007,0.049431058,,Asia
@@ -981,7 +981,7 @@ Mauritania,MRT,1,2007,0.659382492,,Africa
 Mauritius,MUS,1,2007,1.122395121,13.0,Seven seas (open ocean)
 Mozambique,MOZ,1,2007,1.793853641,8.0,Africa
 Niger,NER,1,2007,0.25180582,,Africa
-Nigeria,NGA,1,2007,..,9.0,Africa
+Nigeria,NGA,1,2007,0.0,9.0,Africa
 Rwanda,RWA,1,2007,0.183299837,6.0,Africa
 Sao Tome and Principe,STP,1,2007,0.963156164,,Africa
 Senegal,SEN,1,2007,0.459092432,8.0,Africa
@@ -994,11 +994,11 @@ Togo,TGO,1,2007,0.133448547,,Africa
 Uganda,UGA,1,2007,0.146584807,7.0,Africa
 Zambia,ZMB,1,2007,0.394994975,,Africa
 Zimbabwe,ZWE,1,2007,1.880149786,,Africa
-,,0,2007,,,
-,,0,2007,,,
-,,0,2007,,,
-,,0,2007,,,
-,,0,2007,,,
+,,0,2007,0.0,,
+,,0,2007,0.0,,
+,,0,2007,0.0,,
+,,0,2007,0.0,,
+,,0,2007,0.0,,
 Cambodia,KHM,0,2008,0.224910886,7.5,Asia
 China,CHN,0,2008,0.202696717,17.0,Asia
 Fiji,FJI,0,2008,0.53411255,10.0,Oceania
@@ -1011,7 +1011,7 @@ Philippines,PHL,0,2008,1.711591733,10.0,Asia
 Samoa,WSM,0,2008,0.349655811,,Oceania
 Solomon Islands,SLB,0,2008,0.604631489,,Oceania
 Thailand,THA,0,2008,0.56455243,14.0,Asia
-Timor-Leste,TLS,0,2008,..,,Asia
+Timor-Leste,TLS,0,2008,0.0,,Asia
 Tonga,TON,0,2008,0.509708143,,Oceania
 Vanuatu,VUT,0,2008,0.370462168,,Oceania
 Viet Nam,VNM,0,2008,0.62232256,,Asia
@@ -1055,12 +1055,12 @@ Paraguay,PRY,0,2008,1.123985941,6.0,South America
 Peru,PER,0,2008,1.780030578,11.5,South America
 St. Lucia,LCA,0,2008,1.884228372,,North America
 St. Vincent and the Grenadines,VCT,0,2008,1.540831776,8.0,North America
-Suriname,SUR,0,2008,..,7.5,South America
+Suriname,SUR,0,2008,0.0,7.5,South America
 Algeria,DZA,1,2008,0.108110979,,Africa
 Djibouti,DJI,1,2008,1.169945432,,Africa
 "Egypt, Arab Rep.",EGY,1,2008,0.576895635,11.0,Africa
 "Iran, Islamic Rep.",IRN,0,2008,0.167487411,8.5,Asia
-Iraq,IRQ,0,2008,..,,Asia
+Iraq,IRQ,0,2008,0.0,,Asia
 Jordan,JOR,0,2008,1.666110198,10.0,Asia
 Lebanon,LBN,0,2008,5.151322184,6.0,Asia
 Morocco,MAR,1,2008,0.743053951,12.0,Africa
@@ -1119,11 +1119,11 @@ Togo,TGO,1,2008,1.170855465,,Africa
 Uganda,UGA,1,2008,0.155860008,8.0,Africa
 Zambia,ZMB,1,2008,0.325718873,,Africa
 Zimbabwe,ZWE,1,2008,2.439451542,,Africa
-,,0,2008,,,
-,,0,2008,,,
-,,0,2008,,,
-,,0,2008,,,
-,,0,2008,,,
+,,0,2008,0.0,,
+,,0,2008,0.0,,
+,,0,2008,0.0,,
+,,0,2008,0.0,,
+,,0,2008,0.0,,
 Cambodia,KHM,0,2009,0.235184118,7.5,Asia
 China,CHN,0,2009,0.126418507,17.0,Asia
 Fiji,FJI,0,2009,0.975574942,8.0,Oceania
@@ -1136,7 +1136,7 @@ Philippines,PHL,0,2009,1.688661166,9.0,Asia
 Samoa,WSM,0,2009,0.421333431,,Oceania
 Solomon Islands,SLB,0,2009,0.32048447,,Oceania
 Thailand,THA,0,2009,0.519824751,13.0,Asia
-Timor-Leste,TLS,0,2009,..,,Asia
+Timor-Leste,TLS,0,2009,0.0,,Asia
 Tonga,TON,0,2009,0.451769542,,Oceania
 Vanuatu,VUT,0,2009,0.378185317,,Oceania
 Viet Nam,VNM,0,2009,0.527454019,,Asia
@@ -1180,12 +1180,12 @@ Paraguay,PRY,0,2009,0.856255703,6.0,South America
 Peru,PER,0,2009,1.807674384,12.0,South America
 St. Lucia,LCA,0,2009,1.090421483,,North America
 St. Vincent and the Grenadines,VCT,0,2009,1.601243166,8.0,North America
-Suriname,SUR,0,2009,..,7.0,South America
+Suriname,SUR,0,2009,0.0,7.0,South America
 Algeria,DZA,1,2009,0.09769946,,Africa
 Djibouti,DJI,1,2009,0.908955662,,Africa
 "Egypt, Arab Rep.",EGY,1,2009,0.483088941,11.0,Africa
 "Iran, Islamic Rep.",IRN,0,2009,0.090318321,8.5,Asia
-Iraq,IRQ,0,2009,..,,Asia
+Iraq,IRQ,0,2009,0.0,,Asia
 Jordan,JOR,0,2009,1.120236067,10.0,Asia
 Lebanon,LBN,0,2009,5.185869343,7.0,Asia
 Morocco,MAR,1,2009,0.705968609,12.0,Africa
@@ -1244,11 +1244,11 @@ Togo,TGO,1,2009,0.30544265,,Africa
 Uganda,UGA,1,2009,0.092236326,7.0,Africa
 Zambia,ZMB,1,2009,0.33643624,,Africa
 Zimbabwe,ZWE,1,2009,0.632308888,,Africa
-,,0,2009,,,
-,,0,2009,,,
-,,0,2009,,,
-,,0,2009,,,
-,,0,2009,,,
+,,0,2009,0.0,,
+,,0,2009,0.0,,
+,,0,2009,0.0,,
+,,0,2009,0.0,,
+,,0,2009,0.0,,
 Cambodia,KHM,0,2010,0.294684002,7.5,Asia
 China,CHN,0,2010,0.549737482,18.0,Asia
 Fiji,FJI,0,2010,0.778430812,8.0,Oceania
@@ -1261,7 +1261,7 @@ Philippines,PHL,0,2010,1.346343138,10.0,Asia
 Samoa,WSM,0,2010,0.511936571,,Oceania
 Solomon Islands,SLB,0,2010,0.378280052,,Oceania
 Thailand,THA,0,2010,0.484299468,13.0,Asia
-Timor-Leste,TLS,0,2010,..,,Asia
+Timor-Leste,TLS,0,2010,0.0,,Asia
 Tonga,TON,0,2010,0.629638599,,Oceania
 Vanuatu,VUT,0,2010,0.35385452,,Oceania
 Viet Nam,VNM,0,2010,0.554581893,,Asia
@@ -1305,12 +1305,12 @@ Paraguay,PRY,0,2010,0.762648392,8.0,South America
 Peru,PER,0,2010,1.92841815,12.0,South America
 St. Lucia,LCA,0,2010,0.95187682,,North America
 St. Vincent and the Grenadines,VCT,0,2010,1.403111294,8.0,North America
-Suriname,SUR,0,2010,..,7.0,South America
+Suriname,SUR,0,2010,0.0,7.0,South America
 Algeria,DZA,1,2010,0.066843443,,Africa
 Djibouti,DJI,1,2010,0.871978322,,Africa
 "Egypt, Arab Rep.",EGY,1,2010,0.419601098,11.0,Africa
 "Iran, Islamic Rep.",IRN,0,2010,0.056600961,8.5,Asia
-Iraq,IRQ,0,2010,..,,Asia
+Iraq,IRQ,0,2010,0.0,,Asia
 Jordan,JOR,0,2010,1.039214397,10.0,Asia
 Lebanon,LBN,0,2010,4.85340313,7.5,Asia
 Morocco,MAR,1,2010,0.883150453,12.0,Africa
@@ -1369,11 +1369,11 @@ Togo,TGO,1,2010,0.184969751,,Africa
 Uganda,UGA,1,2010,0.088986265,7.0,Africa
 Zambia,ZMB,1,2010,0.336923765,,Africa
 Zimbabwe,ZWE,1,2010,0.409060446,,Africa
-,,0,2010,,,
-,,0,2010,,,
-,,0,2010,,,
-,,0,2010,,,
-,,0,2010,,,
+,,0,2010,0.0,,
+,,0,2010,0.0,,
+,,0,2010,0.0,,
+,,0,2010,0.0,,
+,,0,2010,0.0,,
 Cambodia,KHM,0,2011,0.362367159,7.0,Asia
 China,CHN,0,2011,0.505569236,17.0,Asia
 Fiji,FJI,0,2011,0.995326785,7.0,Oceania
@@ -1386,7 +1386,7 @@ Philippines,PHL,0,2011,1.233041417,10.75,Asia
 Samoa,WSM,0,2011,0.579245276,,Oceania
 Solomon Islands,SLB,0,2011,0.272394594,,Oceania
 Thailand,THA,0,2011,0.467027915,13.0,Asia
-Timor-Leste,TLS,0,2011,..,,Asia
+Timor-Leste,TLS,0,2011,0.0,,Asia
 Tonga,TON,0,2011,0.625942198,,Oceania
 Vanuatu,VUT,0,2011,0.365037253,,Oceania
 Viet Nam,VNM,0,2011,0.63964374,,Asia
@@ -1430,12 +1430,12 @@ Paraguay,PRY,0,2011,0.692931047,9.0,South America
 Peru,PER,0,2011,1.18677539,12.66666667,South America
 St. Lucia,LCA,0,2011,0.841726586,,North America
 St. Vincent and the Grenadines,VCT,0,2011,1.424919498,8.0,North America
-Suriname,SUR,0,2011,..,8.5,South America
+Suriname,SUR,0,2011,0.0,8.5,South America
 Algeria,DZA,1,2011,0.047854412,,Africa
 Djibouti,DJI,1,2011,0.839593035,,Africa
 "Egypt, Arab Rep.",EGY,1,2011,0.386696086,9.333333333,Africa
 "Iran, Islamic Rep.",IRN,0,2011,0.041542251,8.5,Asia
-Iraq,IRQ,0,2011,..,,Asia
+Iraq,IRQ,0,2011,0.0,,Asia
 Jordan,JOR,0,2011,1.169982749,10.0,Asia
 Lebanon,LBN,0,2011,5.009664272,7.0,Asia
 Morocco,MAR,1,2011,0.736024161,12.0,Africa
@@ -1494,11 +1494,11 @@ Togo,TGO,1,2011,0.095413135,,Africa
 Uganda,UGA,1,2011,0.097542488,7.0,Africa
 Zambia,ZMB,1,2011,0.350432595,8.0,Africa
 Zimbabwe,ZWE,1,2011,0.46094754,,Africa
-,,0,2011,,,
-,,0,2011,,,
-,,0,2011,,,
-,,0,2011,,,
-,,0,2011,,,
+,,0,2011,0.0,,
+,,0,2011,0.0,,
+,,0,2011,0.0,,
+,,0,2011,0.0,,
+,,0,2011,0.0,,
 Cambodia,KHM,0,2012,0.417471739,7.0,Asia
 China,CHN,0,2012,0.497816633,17.0,Asia
 Fiji,FJI,0,2012,1.178861374,7.0,Oceania
@@ -1555,12 +1555,12 @@ Paraguay,PRY,0,2012,0.80113986,9.0,South America
 Peru,PER,0,2012,1.969726415,13.0,South America
 St. Lucia,LCA,0,2012,0.993737182,,North America
 St. Vincent and the Grenadines,VCT,0,2012,1.142081335,8.0,North America
-Suriname,SUR,0,2012,..,9.0,South America
+Suriname,SUR,0,2012,0.0,9.0,South America
 Algeria,DZA,1,2012,0.054812325,,Africa
 Djibouti,DJI,1,2012,0.743473319,,Africa
 "Egypt, Arab Rep.",EGY,1,2012,0.362606517,8.0,Africa
 "Iran, Islamic Rep.",IRN,0,2012,0.023863068,8.5,Asia
-Iraq,IRQ,0,2012,..,,Asia
+Iraq,IRQ,0,2012,0.0,,Asia
 Jordan,JOR,0,2012,1.056108442,10.0,Asia
 Lebanon,LBN,0,2012,4.433959943,7.0,Asia
 Morocco,MAR,1,2012,0.794504033,12.0,Africa
@@ -1588,7 +1588,7 @@ Comoros,COM,1,2012,0.225904081,,Africa
 "Congo, Dem. Rep.",COD,1,2012,0.429785812,,Africa
 "Congo, Rep.",COG,1,2012,0.161802248,,Africa
 Cote d'Ivoire,CIV,1,2012,0.694909438,,Africa
-Eritrea,ERI,1,2012,..,,Africa
+Eritrea,ERI,1,2012,0.0,,Africa
 Eswatini,SWZ,1,2012,0.359341141,,Africa
 Ethiopia,ETH,1,2012,0.233405534,,Africa
 Gabon,GAB,1,2012,0.887535868,9.0,Africa
@@ -1619,11 +1619,11 @@ Togo,TGO,1,2012,0.194719965,,Africa
 Uganda,UGA,1,2012,0.106690281,7.0,Africa
 Zambia,ZMB,1,2012,0.325846499,8.0,Africa
 Zimbabwe,ZWE,1,2012,1.924974915,,Africa
-,,0,2012,,,
-,,0,2012,,,
-,,0,2012,,,
-,,0,2012,,,
-,,0,2012,,,
+,,0,2012,0.0,,
+,,0,2012,0.0,,
+,,0,2012,0.0,,
+,,0,2012,0.0,,
+,,0,2012,0.0,,
 Cambodia,KHM,0,2013,0.472484383,7.0,Asia
 China,CHN,0,2013,0.425499885,17.25,Asia
 Fiji,FJI,0,2013,1.041509922,8.0,Oceania
@@ -1680,12 +1680,12 @@ Paraguay,PRY,0,2013,0.836642012,9.0,South America
 Peru,PER,0,2013,1.062579344,14.0,South America
 St. Lucia,LCA,0,2013,0.927736488,,North America
 St. Vincent and the Grenadines,VCT,0,2013,1.052735268,8.0,North America
-Suriname,SUR,0,2013,..,9.0,South America
+Suriname,SUR,0,2013,0.0,9.0,South America
 Algeria,DZA,1,2013,0.032214886,,Africa
 Djibouti,DJI,1,2013,0.516081545,,Africa
 "Egypt, Arab Rep.",EGY,1,2013,0.291626464,6.117647059,Africa
 "Iran, Islamic Rep.",IRN,0,2013,0.008654923,8.5,Asia
-Iraq,IRQ,0,2013,..,,Asia
+Iraq,IRQ,0,2013,0.0,,Asia
 Jordan,JOR,0,2013,0.966900516,8.5,Asia
 Lebanon,LBN,0,2013,4.492523703,7.0,Asia
 Morocco,MAR,1,2013,1.094455377,11.66666667,Africa
@@ -1713,7 +1713,7 @@ Comoros,COM,1,2013,0.012158712,,Africa
 "Congo, Dem. Rep.",COD,1,2013,0.356767241,6.0,Africa
 "Congo, Rep.",COG,1,2013,0.219892447,7.333333333,Africa
 Cote d'Ivoire,CIV,1,2013,0.955432957,,Africa
-Eritrea,ERI,1,2013,..,,Africa
+Eritrea,ERI,1,2013,0.0,,Africa
 Eswatini,SWZ,1,2013,0.296668748,,Africa
 Ethiopia,ETH,1,2013,0.333314063,,Africa
 Gabon,GAB,1,2013,1.606675785,9.0,Africa
@@ -1744,11 +1744,11 @@ Togo,TGO,1,2013,0.225575195,,Africa
 Uganda,UGA,1,2013,0.1467241,7.5,Africa
 Zambia,ZMB,1,2013,0.477051602,7.5,Africa
 Zimbabwe,ZWE,1,2013,0.969923797,,Africa
-,,0,2013,,,
-,,0,2013,,,
-,,0,2013,,,
-,,0,2013,,,
-,,0,2013,,,
+,,0,2013,0.0,,
+,,0,2013,0.0,,
+,,0,2013,0.0,,
+,,0,2013,0.0,,
+,,0,2013,0.0,,
 Cambodia,KHM,0,2014,0.481834591,7.0,Asia
 China,CHN,0,2014,0.41163413,17.0,Asia
 Fiji,FJI,0,2014,0.780367962,8.0,Oceania
@@ -1805,12 +1805,12 @@ Paraguay,PRY,0,2014,0.774417373,9.5,South America
 Peru,PER,0,2014,1.099977767,14.5,South America
 St. Lucia,LCA,0,2014,1.12469127,,North America
 St. Vincent and the Grenadines,VCT,0,2014,1.031092394,6.0,North America
-Suriname,SUR,0,2014,..,9.0,South America
+Suriname,SUR,0,2014,0.0,9.0,South America
 Algeria,DZA,1,2014,0.027655274,,Africa
 Djibouti,DJI,1,2014,0.444651619,,Africa
 "Egypt, Arab Rep.",EGY,1,2014,0.290208179,6.0,Africa
 "Iran, Islamic Rep.",IRN,0,2014,0.008735962,8.5,Asia
-Iraq,IRQ,0,2014,..,,Asia
+Iraq,IRQ,0,2014,0.0,,Asia
 Jordan,JOR,0,2014,1.180748968,8.5,Asia
 Lebanon,LBN,0,2014,4.659584106,7.0,Asia
 Morocco,MAR,1,2014,0.919370112,11.75,Africa
@@ -1838,7 +1838,7 @@ Comoros,COM,1,2014,0.016108113,,Africa
 "Congo, Dem. Rep.",COD,1,2014,0.292947667,6.0,Africa
 "Congo, Rep.",COG,1,2014,0.232030509,8.0,Africa
 Cote d'Ivoire,CIV,1,2014,0.746568426,7.0,Africa
-Eritrea,ERI,1,2014,..,,Africa
+Eritrea,ERI,1,2014,0.0,,Africa
 Eswatini,SWZ,1,2014,0.296624073,,Africa
 Ethiopia,ETH,1,2014,0.345099882,7.25,Africa
 Gabon,GAB,1,2014,0.963175753,9.0,Africa
@@ -1869,11 +1869,11 @@ Togo,TGO,1,2014,0.276640224,,Africa
 Uganda,UGA,1,2014,0.157732832,7.0,Africa
 Zambia,ZMB,1,2014,0.538746096,7.0,Africa
 Zimbabwe,ZWE,1,2014,0.836717275,,Africa
-,,0,2014,,,
-,,0,2014,,,
-,,0,2014,,,
-,,0,2014,,,
-,,0,2014,,,
+,,0,2014,0.0,,
+,,0,2014,0.0,,
+,,0,2014,0.0,,
+,,0,2014,0.0,,
+,,0,2014,0.0,,
 Cambodia,KHM,0,2015,0.473668022,7.0,Asia
 China,CHN,0,2015,0.386711263,17.0,Asia
 Fiji,FJI,0,2015,1.020671272,8.0,Oceania
@@ -1963,7 +1963,7 @@ Comoros,COM,1,2015,0.017235077,,Africa
 "Congo, Dem. Rep.",COD,1,2015,0.240794692,6.0,Africa
 "Congo, Rep.",COG,1,2015,0.340909379,7.666666667,Africa
 Cote d'Ivoire,CIV,1,2015,0.661663249,7.333333333,Africa
-Eritrea,ERI,1,2015,..,,Africa
+Eritrea,ERI,1,2015,0.0,,Africa
 Eswatini,SWZ,1,2015,0.249530774,,Africa
 Ethiopia,ETH,1,2015,0.48202952,7.0,Africa
 Gabon,GAB,1,2015,1.499165235,8.0,Africa
@@ -1994,11 +1994,11 @@ Togo,TGO,1,2015,0.34572997,,Africa
 Uganda,UGA,1,2015,0.15131571,8.0,Africa
 Zambia,ZMB,1,2015,1.330795965,7.0,Africa
 Zimbabwe,ZWE,1,2015,1.337469975,,Africa
-,,0,2015,,,
-,,0,2015,,,
-,,0,2015,,,
-,,0,2015,,,
-,,0,2015,,,
+,,0,2015,0.0,,
+,,0,2015,0.0,,
+,,0,2015,0.0,,
+,,0,2015,0.0,,
+,,0,2015,0.0,,
 Cambodia,KHM,0,2016,0.597093645,7.0,Asia
 China,CHN,0,2016,0.325945317,17.33333333,Asia
 Fiji,FJI,0,2016,0.694489028,8.0,Oceania
@@ -2088,7 +2088,7 @@ Comoros,COM,1,2016,0.01370166,,Africa
 "Congo, Dem. Rep.",COD,1,2016,0.228295109,6.0,Africa
 "Congo, Rep.",COG,1,2016,0.355587322,5.0,Africa
 Cote d'Ivoire,CIV,1,2016,0.860069757,8.0,Africa
-Eritrea,ERI,1,2016,..,,Africa
+Eritrea,ERI,1,2016,0.0,,Africa
 Eswatini,SWZ,1,2016,0.283387231,,Africa
 Ethiopia,ETH,1,2016,0.561790899,7.0,Africa
 Gabon,GAB,1,2016,1.55217584,7.75,Africa
@@ -2119,11 +2119,11 @@ Togo,TGO,1,2016,0.405891482,,Africa
 Uganda,UGA,1,2016,0.22686517,7.75,Africa
 Zambia,ZMB,1,2016,2.329490165,7.0,Africa
 Zimbabwe,ZWE,1,2016,0.915763427,,Africa
-,,0,2016,,,
-,,0,2016,,,
-,,0,2016,,,
-,,0,2016,,,
-,,0,2016,,,
+,,0,2016,0.0,,
+,,0,2016,0.0,,
+,,0,2016,0.0,,
+,,0,2016,0.0,,
+,,0,2016,0.0,,
 Cambodia,KHM,0,2017,0.60770753,7.0,Asia
 China,CHN,0,2017,0.501140083,17.0,Asia
 Fiji,FJI,0,2017,0.841254455,9.0,Oceania
@@ -2213,7 +2213,7 @@ Comoros,COM,1,2017,0.009601502,,Africa
 "Congo, Dem. Rep.",COD,1,2017,0.191386036,5.0,Africa
 "Congo, Rep.",COG,1,2017,0.413480118,3.2,Africa
 Cote d'Ivoire,CIV,1,2017,0.786185256,8.0,Africa
-Eritrea,ERI,1,2017,..,,Africa
+Eritrea,ERI,1,2017,0.0,,Africa
 Eswatini,SWZ,1,2017,0.428723948,,Africa
 Ethiopia,ETH,1,2017,0.548062938,7.0,Africa
 Gabon,GAB,1,2017,1.247616908,7.5,Africa
@@ -2244,11 +2244,11 @@ Togo,TGO,1,2017,0.45807193,,Africa
 Uganda,UGA,1,2017,0.30171106,8.0,Africa
 Zambia,ZMB,1,2017,1.735738809,7.0,Africa
 Zimbabwe,ZWE,1,2017,2.13422775,,Africa
-,,0,2017,,,
-,,0,2017,,,
-,,0,2017,,,
-,,0,2017,,,
-,,0,2017,,,
+,,0,2017,0.0,,
+,,0,2017,0.0,,
+,,0,2017,0.0,,
+,,0,2017,0.0,,
+,,0,2017,0.0,,
 Cambodia,KHM,0,2018,0.731672387,7.0,Asia
 China,CHN,0,2018,0.581504505,17.0,Asia
 Fiji,FJI,0,2018,0.86064192,9.0,Oceania
@@ -2338,7 +2338,7 @@ Comoros,COM,1,2018,0.081723707,,Africa
 "Congo, Dem. Rep.",COD,1,2018,0.110078647,5.0,Africa
 "Congo, Rep.",COG,1,2018,0.598845471,4.0,Africa
 Cote d'Ivoire,CIV,1,2018,0.814623902,8.0,Africa
-Eritrea,ERI,1,2018,..,,Africa
+Eritrea,ERI,1,2018,0.0,,Africa
 Eswatini,SWZ,1,2018,0.351033259,,Africa
 Ethiopia,ETH,1,2018,0.550247495,7.0,Africa
 Gabon,GAB,1,2018,1.443532045,7.0,Africa
@@ -2369,11 +2369,11 @@ Togo,TGO,1,2018,0.497699578,,Africa
 Uganda,UGA,1,2018,0.333644468,8.0,Africa
 Zambia,ZMB,1,2018,2.322508934,6.333333333,Africa
 Zimbabwe,ZWE,1,2018,0.972526868,,Africa
-,,0,2018,,,
-,,0,2018,,,
-,,0,2018,,,
-,,0,2018,,,
-,,0,2018,,,
+,,0,2018,0.0,,
+,,0,2018,0.0,,
+,,0,2018,0.0,,
+,,0,2018,0.0,,
+,,0,2018,0.0,,
 Cambodia,KHM,0,2019,0.939028191,7.0,Asia
 China,CHN,0,2019,0.668341617,17.0,Asia
 Fiji,FJI,0,2019,3.296410285,9.0,Oceania
@@ -2441,7 +2441,7 @@ Lebanon,LBN,0,2019,6.638862849,4.0,Asia
 Morocco,MAR,1,2019,0.986925995,12.0,Africa
 Syrian Arab Republic,SYR,0,2019,0.017934187,,Asia
 Tunisia,TUN,1,2019,2.242389327,8.0,Africa
-"Yemen, Rep.",YEM,0,2019,..,,Asia
+"Yemen, Rep.",YEM,0,2019,0.0,,Asia
 Afghanistan,AFG,0,2019,0.07747815,,Asia
 Bangladesh,BGD,0,2019,0.311657988,9.0,Asia
 Bhutan,BTN,0,2019,1.580750791,,Asia
@@ -2463,7 +2463,7 @@ Comoros,COM,1,2019,0.060058199,,Africa
 "Congo, Dem. Rep.",COD,1,2019,1.604468239,5.0,Africa
 "Congo, Rep.",COG,1,2019,0.683591735,4.0,Africa
 Cote d'Ivoire,CIV,1,2019,1.020381336,8.0,Africa
-Eritrea,ERI,1,2019,..,,Africa
+Eritrea,ERI,1,2019,0.0,,Africa
 Eswatini,SWZ,1,2019,0.589473495,,Africa
 Ethiopia,ETH,1,2019,0.772727478,7.5,Africa
 Gabon,GAB,1,2019,1.779517721,7.0,Africa
@@ -2494,11 +2494,11 @@ Togo,TGO,1,2019,0.541828526,,Africa
 Uganda,UGA,1,2019,0.389664788,8.0,Africa
 Zambia,ZMB,1,2019,3.771001048,4.333333333,Africa
 Zimbabwe,ZWE,1,2019,1.740110976,,Africa
-,,0,2019,,,
-,,0,2019,,,
-,,0,2019,,,
-,,0,2019,,,
-,,0,2019,,,
+,,0,2019,0.0,,
+,,0,2019,0.0,,
+,,0,2019,0.0,,
+,,0,2019,0.0,,
+,,0,2019,0.0,,
 Cambodia,KHM,0,2020,0.792882317,7.0,Asia
 China,CHN,0,2020,0.634805388,17.0,Asia
 Fiji,FJI,0,2020,0.726832443,9.0,Oceania
@@ -2566,7 +2566,7 @@ Lebanon,LBN,0,2020,1.989148491,1.5,Asia
 Morocco,MAR,1,2020,1.033674398,11.5,Africa
 Syrian Arab Republic,SYR,0,2020,0.011686953,,Asia
 Tunisia,TUN,1,2020,2.23627241,7.2,Africa
-"Yemen, Rep.",YEM,0,2020,..,,Asia
+"Yemen, Rep.",YEM,0,2020,0.0,,Asia
 Afghanistan,AFG,0,2020,0.051401083,,Asia
 Bangladesh,BGD,0,2020,0.26917057,9.0,Asia
 Bhutan,BTN,0,2020,1.474940529,,Asia
@@ -2588,7 +2588,7 @@ Comoros,COM,1,2020,0.282932899,,Africa
 "Congo, Dem. Rep.",COD,1,2020,0.133047676,5.0,Africa
 "Congo, Rep.",COG,1,2020,0.853225026,4.5,Africa
 Cote d'Ivoire,CIV,1,2020,1.194496514,8.0,Africa
-Eritrea,ERI,1,2020,..,,Africa
+Eritrea,ERI,1,2020,0.0,,Africa
 Eswatini,SWZ,1,2020,0.587581207,,Africa
 Ethiopia,ETH,1,2020,0.588905049,7.0,Africa
 Gabon,GAB,1,2020,1.972669579,4.0,Africa
@@ -2619,11 +2619,11 @@ Togo,TGO,1,2020,0.542363314,,Africa
 Uganda,UGA,1,2020,0.78909669,8.0,Africa
 Zambia,ZMB,1,2020,2.694980267,2.333333333,Africa
 Zimbabwe,ZWE,1,2020,0.238853497,,Africa
-,,0,2020,,,
-,,0,2020,,,
-,,0,2020,,,
-,,0,2020,,,
-,,0,2020,,,
+,,0,2020,0.0,,
+,,0,2020,0.0,,
+,,0,2020,0.0,,
+,,0,2020,0.0,,
+,,0,2020,0.0,,
 Cambodia,KHM,0,2021,0.87873568,7.0,Asia
 China,CHN,0,2021,0.626739708,17.0,Asia
 Fiji,FJI,0,2021,0.340657506,8.0,Oceania
@@ -2691,7 +2691,7 @@ Lebanon,LBN,0,2021,2.070531917,1.5,Asia
 Morocco,MAR,1,2021,0.985055848,11.0,Africa
 Syrian Arab Republic,SYR,0,2021,0.005025474,,Asia
 Tunisia,TUN,1,2021,1.844795653,5.666666667,Africa
-"Yemen, Rep.",YEM,0,2021,..,,Asia
+"Yemen, Rep.",YEM,0,2021,0.0,,Asia
 Afghanistan,AFG,0,2021,0.047481657,,Asia
 Bangladesh,BGD,0,2021,0.249769296,9.0,Asia
 Bhutan,BTN,0,2021,2.252830807,,Asia
@@ -2713,7 +2713,7 @@ Comoros,COM,1,2021,0.050962549,,Africa
 "Congo, Dem. Rep.",COD,1,2021,0.107471953,5.0,Africa
 "Congo, Rep.",COG,1,2021,0.499371619,4.5,Africa
 Cote d'Ivoire,CIV,1,2021,1.046367058,9.0,Africa
-Eritrea,ERI,1,2021,..,,Africa
+Eritrea,ERI,1,2021,0.0,,Africa
 Eswatini,SWZ,1,2021,0.365711366,,Africa
 Ethiopia,ETH,1,2021,0.426440593,5.0,Africa
 Gabon,GAB,1,2021,1.361540251,6.0,Africa
@@ -2744,11 +2744,11 @@ Togo,TGO,1,2021,1.184106855,,Africa
 Uganda,UGA,1,2021,1.089399759,8.0,Africa
 Zambia,ZMB,1,2021,1.288353179,2.333333333,Africa
 Zimbabwe,ZWE,1,2021,0.202428737,,Africa
-,,0,2021,,,
-,,0,2021,,,
-,,0,2021,,,
-,,0,2021,,,
-,,0,2021,,,
+,,0,2021,0.0,,
+,,0,2021,0.0,,
+,,0,2021,0.0,,
+,,0,2021,0.0,,
+,,0,2021,0.0,,
 Cambodia,KHM,0,2022,1.443907324,7.0,Asia
 China,CHN,0,2022,0.582363838,17.0,Asia
 Fiji,FJI,0,2022,1.867460023,8.0,Oceania
@@ -2814,9 +2814,9 @@ Iraq,IRQ,0,2022,0.245265037,6.0,Asia
 Jordan,JOR,0,2022,2.380933408,8.0,Asia
 Lebanon,LBN,0,2022,5.734837189,1.5,Asia
 Morocco,MAR,1,2022,1.256823138,11.0,Africa
-Syrian Arab Republic,SYR,0,2022,..,,Asia
+Syrian Arab Republic,SYR,0,2022,0.0,,Asia
 Tunisia,TUN,1,2022,3.077674262,4.666666667,Africa
-"Yemen, Rep.",YEM,0,2022,..,,Asia
+"Yemen, Rep.",YEM,0,2022,0.0,,Asia
 Afghanistan,AFG,0,2022,0.086086646,,Asia
 Bangladesh,BGD,0,2022,0.313456723,9.0,Asia
 Bhutan,BTN,0,2022,2.210532754,,Asia
@@ -2838,7 +2838,7 @@ Comoros,COM,1,2022,0.098025474,,Africa
 "Congo, Dem. Rep.",COD,1,2022,0.138428916,6.0,Africa
 "Congo, Rep.",COG,1,2022,1.084587165,5.0,Africa
 Cote d'Ivoire,CIV,1,2022,1.019757691,9.0,Africa
-Eritrea,ERI,1,2022,..,,Africa
+Eritrea,ERI,1,2022,0.0,,Africa
 Eswatini,SWZ,1,2022,0.4159591,,Africa
 Ethiopia,ETH,1,2022,0.389015577,3.0,Africa
 Gabon,GAB,1,2022,1.226554035,6.0,Africa
@@ -2869,8 +2869,100 @@ Togo,TGO,1,2022,1.224330762,,Africa
 Uganda,UGA,1,2022,1.040710654,7.0,Africa
 Zambia,ZMB,1,2022,1.114145808,2.333333333,Africa
 Zimbabwe,ZWE,1,2022,0.613498966,,Africa
-,,0,2022,,,
-,,0,2022,,,
-,,0,2022,,,
-,,0,2022,,,
-,,0,2022,,,
+,,0,2022,0.0,,
+,,0,2022,0.0,,
+,,0,2022,0.0,,
+,,0,2022,0.0,,
+,,0,2022,0.0,,
+Libya,LBY,1,2000,0.0,0.0,Africa
+Libya,LBY,1,2001,0.0,0.0,Africa
+Libya,LBY,1,2002,0.0,0.0,Africa
+Libya,LBY,1,2003,0.0,0.0,Africa
+Libya,LBY,1,2004,0.0,0.0,Africa
+Libya,LBY,1,2005,0.0,0.0,Africa
+Libya,LBY,1,2006,0.0,0.0,Africa
+Libya,LBY,1,2007,0.0,0.0,Africa
+Libya,LBY,1,2008,0.0,0.0,Africa
+Libya,LBY,1,2009,0.0,0.0,Africa
+Libya,LBY,1,2010,0.0,0.0,Africa
+Libya,LBY,1,2011,0.0,0.0,Africa
+Libya,LBY,1,2012,0.0,0.0,Africa
+Libya,LBY,1,2013,0.0,0.0,Africa
+Libya,LBY,1,2014,0.0,0.0,Africa
+Libya,LBY,1,2015,0.0,0.0,Africa
+Libya,LBY,1,2016,0.0,0.0,Africa
+Libya,LBY,1,2017,0.0,0.0,Africa
+Libya,LBY,1,2018,0.0,0.0,Africa
+Libya,LBY,1,2019,0.0,0.0,Africa
+Libya,LBY,1,2020,0.0,0.0,Africa
+Libya,LBY,1,2021,0.0,0.0,Africa
+Libya,LBY,1,2022,0.0,0.0,Africa
+Western Sahara,ESH,1,2000,0.0,0.0,Africa
+Western Sahara,ESH,1,2001,0.0,0.0,Africa
+Western Sahara,ESH,1,2002,0.0,0.0,Africa
+Western Sahara,ESH,1,2003,0.0,0.0,Africa
+Western Sahara,ESH,1,2004,0.0,0.0,Africa
+Western Sahara,ESH,1,2005,0.0,0.0,Africa
+Western Sahara,ESH,1,2006,0.0,0.0,Africa
+Western Sahara,ESH,1,2007,0.0,0.0,Africa
+Western Sahara,ESH,1,2008,0.0,0.0,Africa
+Western Sahara,ESH,1,2009,0.0,0.0,Africa
+Western Sahara,ESH,1,2010,0.0,0.0,Africa
+Western Sahara,ESH,1,2011,0.0,0.0,Africa
+Western Sahara,ESH,1,2012,0.0,0.0,Africa
+Western Sahara,ESH,1,2013,0.0,0.0,Africa
+Western Sahara,ESH,1,2014,0.0,0.0,Africa
+Western Sahara,ESH,1,2015,0.0,0.0,Africa
+Western Sahara,ESH,1,2016,0.0,0.0,Africa
+Western Sahara,ESH,1,2017,0.0,0.0,Africa
+Western Sahara,ESH,1,2018,0.0,0.0,Africa
+Western Sahara,ESH,1,2019,0.0,0.0,Africa
+Western Sahara,ESH,1,2020,0.0,0.0,Africa
+Western Sahara,ESH,1,2021,0.0,0.0,Africa
+Western Sahara,ESH,1,2022,0.0,0.0,Africa
+Namibia,NAM,1,2000,0.0,0.0,Africa
+Namibia,NAM,1,2001,0.0,0.0,Africa
+Namibia,NAM,1,2002,0.0,0.0,Africa
+Namibia,NAM,1,2003,0.0,0.0,Africa
+Namibia,NAM,1,2004,0.0,0.0,Africa
+Namibia,NAM,1,2005,0.0,0.0,Africa
+Namibia,NAM,1,2006,0.0,0.0,Africa
+Namibia,NAM,1,2007,0.0,0.0,Africa
+Namibia,NAM,1,2008,0.0,0.0,Africa
+Namibia,NAM,1,2009,0.0,0.0,Africa
+Namibia,NAM,1,2010,0.0,0.0,Africa
+Namibia,NAM,1,2011,0.0,0.0,Africa
+Namibia,NAM,1,2012,0.0,0.0,Africa
+Namibia,NAM,1,2013,0.0,0.0,Africa
+Namibia,NAM,1,2014,0.0,0.0,Africa
+Namibia,NAM,1,2015,0.0,0.0,Africa
+Namibia,NAM,1,2016,0.0,0.0,Africa
+Namibia,NAM,1,2017,0.0,0.0,Africa
+Namibia,NAM,1,2018,0.0,0.0,Africa
+Namibia,NAM,1,2019,0.0,0.0,Africa
+Namibia,NAM,1,2020,0.0,0.0,Africa
+Namibia,NAM,1,2021,0.0,0.0,Africa
+Namibia,NAM,1,2022,0.0,0.0,Africa
+South Sudan,SSD,1,2000,0.0,0.0,Africa
+South Sudan,SSD,1,2001,0.0,0.0,Africa
+South Sudan,SSD,1,2002,0.0,0.0,Africa
+South Sudan,SSD,1,2003,0.0,0.0,Africa
+South Sudan,SSD,1,2004,0.0,0.0,Africa
+South Sudan,SSD,1,2005,0.0,0.0,Africa
+South Sudan,SSD,1,2006,0.0,0.0,Africa
+South Sudan,SSD,1,2007,0.0,0.0,Africa
+South Sudan,SSD,1,2008,0.0,0.0,Africa
+South Sudan,SSD,1,2009,0.0,0.0,Africa
+South Sudan,SSD,1,2010,0.0,0.0,Africa
+South Sudan,SSD,1,2011,0.0,0.0,Africa
+South Sudan,SSD,1,2012,0.0,0.0,Africa
+South Sudan,SSD,1,2013,0.0,0.0,Africa
+South Sudan,SSD,1,2014,0.0,0.0,Africa
+South Sudan,SSD,1,2015,0.0,0.0,Africa
+South Sudan,SSD,1,2016,0.0,0.0,Africa
+South Sudan,SSD,1,2017,0.0,0.0,Africa
+South Sudan,SSD,1,2018,0.0,0.0,Africa
+South Sudan,SSD,1,2019,0.0,0.0,Africa
+South Sudan,SSD,1,2020,0.0,0.0,Africa
+South Sudan,SSD,1,2021,0.0,0.0,Africa
+South Sudan,SSD,1,2022,0.0,0.0,Africa
