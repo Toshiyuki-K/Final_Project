@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kohei Inagaki and Toshiyuki Kindaichi">
+<meta name="dcterms.date" content="2024-12-06">
+
+<title>30538 Final Project: Rising Interest, Rising Burden: Debt Service Challenges in Africa</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="Write-up_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Write-up_files/libs/quarto-html/quarto.js"></script>
+<script src="Write-up_files/libs/quarto-html/popper.min.js"></script>
+<script src="Write-up_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Write-up_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Write-up_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Write-up_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Write-up_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Write-up_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Write-up_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">30538 Final Project: Rising Interest, Rising Burden: Debt Service Challenges in Africa</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kohei Inagaki and Toshiyuki Kindaichi </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 6, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div id="e7cb87e7" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> altair <span class="im">as</span> alt</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">'ignore'</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>alt.renderers.enable(<span class="st">"png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>RendererRegistry.enable('png')</code></pre>
+</div>
+</div>
+<div id="60b31a93" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> altair <span class="im">as</span> alt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="group-members" class="level3">
+<h3 class="anchored" data-anchor-id="group-members">Group Members</h3>
+<ul>
+<li>Kohei Inagaki | Section: 2 | GitHub: Kohei1208 .</li>
+<li>Toshiyuki Kindaichi | Section 2 | GitHub: Toshiyuki-K .</li>
+</ul>
+</section>
+<section id="research-question" class="level3">
+<h3 class="anchored" data-anchor-id="research-question">Research Question:</h3>
+<ul>
+<li>What are the potential macroeconomic factors that might disproportionately affect African countries, and what policy measures can mitigate these challenges?</li>
+<li>This study examines the factors contributing to the high debt-servicing burdens faced by African nations and evaluates potential policy solutions, such as interest rate reductions and debt restructuring, to address these challenges.</li>
+</ul>
+</section>
+<section id="approach-and-codings" class="level3">
+<h3 class="anchored" data-anchor-id="approach-and-codings">Approach and codings:</h3>
+<p>First, we check the external debt in African countries to see the current situation with static plots, and then compare interest-to-GNI for African data with other representative emerging and Non-African (all countries except for Africa) markets to see the potential factors that hinder the African financing by with a weighted average of interest-to-GNI, normalizing the different credit risks.</p>
+<p>We retrieve from the International Debt Statistics and create a chart comparing annual borrowing (Disbursements) with annual repayments of principal and Interest Payment. Additionally, we calculated Net Borrowing (funds available for development).</p>
+<p>We check the overall trend across markets with a shiny app. Due to technical issues between Altair and shiny, we used Matplotlib. A checkbox enables you to select multiple markets. Alphabetic credit ratings were converted to numbers, decreasing from better A to lower C. A switch is also created to compare each country’s data as a supplement for static plots.</p>
+</section>
+<section id="data-sources" class="level3">
+<h3 class="anchored" data-anchor-id="data-sources">Data Sources:</h3>
+<ul>
+<li>World Bank Databank (World Development Indicators): Data on debt-to-GNI ratios, interest payments.</li>
+<li>Credit Rating Data: Average credit ratings provided by major credit rating agencies. These ratings were quantified and obtained through internal access at the UNDP.</li>
+<li>International Debt Statistics: Supplementary data on external debt and repayment.</li>
+</ul>
+</section>
+<section id="findings" class="level3">
+<h3 class="anchored" data-anchor-id="findings">Findings:</h3>
+<ol type="1">
+<li>Static Plot</li>
+</ol>
+<ul>
+<li>Debt Landscape (2012-2022): Annual borrowing in Africa (~$80 billion) is largely offset by repayments, limiting net financing for development.</li>
+</ul>
+<p><img src="pictures/1_Debt_1.png" class="img-fluid quarto-figure quarto-figure-left" style="width:45.0%"> <img src="pictures/2_Debt_2.png" class="img-fluid quarto-figure quarto-figure-right" style="width:55.0%"></p>
+<div id="bb59ef0d" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting of Debt Disbursements vs Debt Repayment by altair</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>sub_file_path <span class="op">=</span> <span class="st">'data/Sub-Saharan Africa (excluding high income).csv'</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>data_raw <span class="op">=</span> pd.read_csv(sub_file_path)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean column names and data</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>data_raw.columns <span class="op">=</span> data_raw.columns.<span class="bu">str</span>.strip()</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>data_raw[<span class="st">"Year"</span>] <span class="op">=</span> data_raw[<span class="st">"Year"</span>].<span class="bu">str</span>.strip()</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert non-numeric data to NaN and cast columns to numeric</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> data_raw.columns[<span class="dv">1</span>:]:</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    data_raw[col] <span class="op">=</span> data_raw[col].replace(<span class="st">'..'</span>, <span class="va">None</span>).<span class="bu">str</span>.replace(<span class="st">','</span>, <span class="st">''</span>).astype(<span class="bu">float</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract necessary indicators</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>key_indicators <span class="op">=</span> [</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Disbursements (long-term)"</span>,</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Principal repayments (long-term)"</span>,</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Interest payments (long-term)"</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter data based on key indicators</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>selected_data <span class="op">=</span> data_raw[data_raw[<span class="st">"Year"</span>].isin(key_indicators)].set_index(<span class="st">"Year"</span>).transpose()</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Fill missing values with 0</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>selected_data.fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate total payments</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>selected_data[<span class="st">"Total Payments"</span>] <span class="op">=</span> (</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    selected_data[<span class="st">"Principal repayments (long-term)"</span>] <span class="op">+</span> selected_data[<span class="st">"Interest payments (long-term)"</span>]</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate Debt Repayment Ratio</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>selected_data[<span class="st">"Debt Repayment Ratio"</span>] <span class="op">=</span> (</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    selected_data[<span class="st">"Total Payments"</span>] <span class="op">/</span> selected_data[<span class="st">"Disbursements (long-term)"</span>]</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert values to billions</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>selected_data[<span class="st">"Disbursements (long-term)"</span>] <span class="op">/=</span> <span class="fl">1e3</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>selected_data[<span class="st">"Total Payments"</span>] <span class="op">/=</span> <span class="fl">1e3</span></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Data preparation for bar chart</span></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>selected_data.reset_index(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>selected_data.rename(columns<span class="op">=</span>{<span class="st">"index"</span>: <span class="st">"Year"</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace category names</span></span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>category_mapping <span class="op">=</span> {</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Disbursements (long-term)"</span>: <span class="st">"Debt Disbursements"</span>,</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Total Payments"</span>: <span class="st">"Debt Payments"</span></span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>melted_data <span class="op">=</span> selected_data.melt(</span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>    id_vars<span class="op">=</span><span class="st">"Year"</span>, </span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>    value_vars<span class="op">=</span>[<span class="st">"Disbursements (long-term)"</span>, <span class="st">"Total Payments"</span>],</span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>    var_name<span class="op">=</span><span class="st">"Category"</span>, </span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>    value_name<span class="op">=</span><span class="st">"Value"</span></span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a><span class="co"># Update category names</span></span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>melted_data[<span class="st">"Category"</span>] <span class="op">=</span> melted_data[<span class="st">"Category"</span>].replace(category_mapping)</span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a bar chart (side by side)</span></span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>bar_chart <span class="op">=</span> alt.Chart(melted_data).mark_bar().encode(</span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>alt.X(<span class="st">'Year:O'</span>, title<span class="op">=</span><span class="st">"Year"</span>, axis<span class="op">=</span>alt.Axis(labelAngle<span class="op">=-</span><span class="dv">45</span>)),  <span class="co"># Tilt Year labels by 45 degrees</span></span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>    xOffset<span class="op">=</span><span class="st">'Category:N'</span>,  <span class="co"># Offset to align bars side by side</span></span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span>alt.Y(<span class="st">'Value:Q'</span>, title<span class="op">=</span><span class="st">"Amount ($ billions)"</span>),</span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span>alt.Color(<span class="st">'Category:N'</span>, legend<span class="op">=</span>alt.Legend(title<span class="op">=</span><span class="st">"Category"</span>)),</span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>    tooltip<span class="op">=</span>[<span class="st">'Year'</span>, <span class="st">'Category'</span>, alt.Tooltip(<span class="st">'Value:Q'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">",.1f"</span>)]</span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a line chart (Debt Repayment Ratio)</span></span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>line_chart <span class="op">=</span> alt.Chart(selected_data).mark_line(point<span class="op">=</span><span class="va">True</span>).encode(</span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>alt.X(<span class="st">'Year:O'</span>, title<span class="op">=</span><span class="st">"Year"</span>, axis<span class="op">=</span>alt.Axis(labelAngle<span class="op">=-</span><span class="dv">45</span>)),  <span class="co"># Tilt Year labels by 45 degrees</span></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span>alt.Y(<span class="st">'Debt Repayment Ratio:Q'</span>, title<span class="op">=</span><span class="st">"Debt Repayment Ratio"</span>, axis<span class="op">=</span>alt.Axis(<span class="bu">format</span><span class="op">=</span><span class="st">'.0%'</span>)),</span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span>alt.value(<span class="st">'red'</span>),  <span class="co"># Set line color to red</span></span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a>    tooltip<span class="op">=</span>[<span class="st">'Year'</span>, alt.Tooltip(<span class="st">'Debt Repayment Ratio:Q'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">".1%"</span>)]</span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine bar and line charts into a dual-axis chart</span></span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a>chart <span class="op">=</span> alt.layer(</span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>    bar_chart,</span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>    line_chart.encode(y<span class="op">=</span>alt.Y(<span class="st">'Debt Repayment Ratio:Q'</span>, title<span class="op">=</span><span class="st">"Debt Repayment Ratio"</span>, axis<span class="op">=</span>alt.Axis(orient<span class="op">=</span><span class="st">"right"</span>, <span class="bu">format</span><span class="op">=</span><span class="st">".1%"</span>)))</span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a>).resolve_scale(</span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">'independent'</span>  <span class="co"># Use independent Y-axis scales for the bar and line charts</span></span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a>).properties(</span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a>    width<span class="op">=</span><span class="dv">400</span>,  <span class="co"># Adjust width</span></span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a>    height<span class="op">=</span><span class="dv">300</span>  <span class="co"># Adjust height</span></span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>).configure_legend(</span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a>    orient<span class="op">=</span><span class="st">'top-left'</span>,  <span class="co"># Place legend in the top-left corner</span></span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>    padding<span class="op">=-</span><span class="dv">10</span>,  <span class="co"># Reduce padding for a tighter layout</span></span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a>    cornerRadius<span class="op">=</span><span class="dv">1</span>,  <span class="co"># Slightly round legend corners</span></span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>    fillColor<span class="op">=</span><span class="st">'white'</span>,  <span class="co"># Set legend background to white</span></span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a>    strokeWidth<span class="op">=</span><span class="fl">0.1</span>,  <span class="co"># Adjust legend border thickness</span></span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>    labelFontSize<span class="op">=</span><span class="dv">10</span>,  <span class="co"># Reduce font size for legend labels</span></span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a>    titleFontSize<span class="op">=</span><span class="dv">10</span>  <span class="co"># Reduce font size for legend title</span></span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a>).configure_title(</span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a>    anchor<span class="op">=</span><span class="st">'start'</span>,  <span class="co"># Align title to the left</span></span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a>    fontSize<span class="op">=</span><span class="dv">10</span>,  <span class="co"># Set smaller font size for the title</span></span>
+<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a>    dx<span class="op">=</span><span class="dv">5</span>,  <span class="co"># Adjust X position of the title</span></span>
+<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a>    dy<span class="op">=-</span><span class="dv">5</span>  <span class="co"># Adjust Y position of the title (move closer to the chart)</span></span>
+<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a>).properties(</span>
+<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"Debt Disbursements vs Debt Repayment"</span></span>
+<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the chart</span></span>
+<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a>chart.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Write-up_files/figure-html/cell-4-output-1.png" width="505" height="379" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="705e7af3" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting of Disbursement breakdown by altair</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>data_raw <span class="op">=</span> pd.read_csv(sub_file_path) </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean column names and convert data</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>data_raw.columns <span class="op">=</span> data_raw.columns.<span class="bu">str</span>.strip()</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>data_raw[<span class="st">"Year"</span>] <span class="op">=</span> data_raw[<span class="st">"Year"</span>].<span class="bu">str</span>.strip()</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> data_raw.columns[<span class="dv">1</span>:]:</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    data_raw[col] <span class="op">=</span> data_raw[col].replace(<span class="st">'..'</span>, <span class="va">None</span>).<span class="bu">str</span>.replace(<span class="st">','</span>, <span class="st">''</span>).astype(<span class="bu">float</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract key indicators</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>key_indicators <span class="op">=</span> [</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Disbursements (long-term)"</span>, </span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Principal repayments (long-term)"</span>, </span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Interest payments (long-term)"</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter and reshape data</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>selected_data <span class="op">=</span> data_raw[data_raw[<span class="st">"Year"</span>].isin(key_indicators)].set_index(<span class="st">"Year"</span>).transpose()</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>selected_data.fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>selected_data.reset_index(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>selected_data.rename(columns<span class="op">=</span>{<span class="st">"index"</span>: <span class="st">"Year"</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate Net Borrowing</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>selected_data[<span class="st">"Net Borrowing"</span>] <span class="op">=</span> (</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    selected_data[<span class="st">"Disbursements (long-term)"</span>] </span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> selected_data[<span class="st">"Principal repayments (long-term)"</span>] </span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span> selected_data[<span class="st">"Interest payments (long-term)"</span>]</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Create `filtered_chart_data` (include Net Borrowing, exclude Disbursements)</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>filtered_chart_data <span class="op">=</span> selected_data.melt(</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    id_vars<span class="op">=</span><span class="st">"Year"</span>,</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    value_vars<span class="op">=</span>[</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Principal repayments (long-term)"</span>, </span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Interest payments (long-term)"</span>, </span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Net Borrowing"</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    var_name<span class="op">=</span><span class="st">"Category"</span>,</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    value_name<span class="op">=</span><span class="st">"Amount"</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert Amount to billions</span></span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>filtered_chart_data[<span class="st">"Amount"</span>] <span class="op">/=</span> <span class="fl">1e3</span>  <span class="co"># Convert to billions</span></span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Create Altair chart</span></span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>grouped_chart <span class="op">=</span> alt.Chart(filtered_chart_data).mark_bar().encode(</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>alt.X(<span class="st">'Year:O'</span>, title<span class="op">=</span><span class="st">'Year'</span>, axis<span class="op">=</span>alt.Axis(labelAngle<span class="op">=-</span><span class="dv">45</span>)),</span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span>alt.Y(<span class="st">'Amount:Q'</span>, title<span class="op">=</span><span class="st">'Amount (in Billion USD)'</span>),</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span>alt.Color(</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Category:N'</span>, </span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>        scale<span class="op">=</span>alt.Scale(</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>            domain<span class="op">=</span>[</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Principal repayments (long-term)"</span>, </span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Interest payments (long-term)"</span>, </span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Net Borrowing"</span></span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>            ],</span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>            <span class="bu">range</span><span class="op">=</span>[<span class="st">'#4575B4'</span>, <span class="st">'#D73027'</span>, <span class="st">'#1A9850'</span>]  <span class="co"># Blue, Red, Green</span></span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>        legend<span class="op">=</span><span class="va">None</span>  <span class="co"># Remove legend</span></span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>    column<span class="op">=</span>alt.Column(</span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Category:N'</span>, </span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>        title<span class="op">=</span><span class="va">None</span>, </span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>        sort<span class="op">=</span>[</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Principal repayments (long-term)"</span>, </span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Interest payments (long-term)"</span>, </span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Net Borrowing"</span></span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>        ],</span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>        header<span class="op">=</span>alt.Header(</span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>            labelFontSize<span class="op">=</span><span class="dv">10</span>,</span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>            labelFontWeight<span class="op">=</span><span class="st">'bold'</span>,  <span class="co"># Set to bold</span></span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>            labelAlign<span class="op">=</span><span class="st">'center'</span>      <span class="co"># Center align</span></span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a>).properties(</span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>    width<span class="op">=</span><span class="dv">200</span>,</span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a>    height<span class="op">=</span><span class="dv">300</span>,</span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span>alt.TitleParams(</span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a>        text<span class="op">=</span><span class="st">'Breakdown of Debt Disbursements'</span>,</span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>        align<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a>        anchor<span class="op">=</span><span class="st">'middle'</span>,</span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a>        fontSize<span class="op">=</span><span class="dv">16</span></span>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a><span class="co"># Display chart</span></span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a>grouped_chart.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Write-up_files/figure-html/cell-5-output-1.png" width="690" height="397" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>Interest Payments on External Debt (2022): Mozambique (13.9%) and Senegal (4.9%) have experienced the heaviest burdens. Namibia and Libya lack data and are excluded from the plot to avoid the impact of imputing missing values.</li>
+</ul>
+<p><img src="pictures/3_map.png" class="img-fluid quarto-figure quarto-figure-left" style="width:30.0%"> <img src="pictures/4_individual_example_senegal.png" class="img-fluid quarto-figure quarto-figure-right" style="width:50.0%"></p>
+<ul>
+<li>Data wrangling to create csv file for plotting head map and creating app</li>
+</ul>
+<div id="f7471928" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># File paths</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>raw_data_path <span class="op">=</span> <span class="st">'data/World bank raw data.csv'</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>average_credit_rating_path <span class="op">=</span> <span class="st">'data/Average Credit Rating.csv'</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>country_code_path <span class="op">=</span> <span class="st">'data/country_code.csv'</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>shapefile_path <span class="op">=</span> <span class="st">'data/WB_countries_Admin0_10m.shp'</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Path to save the final csv file</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>final_output_path <span class="op">=</span> <span class="st">'data/all_data_verf.csv'</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Mapping dictionary for country name standardization</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>name_mapping <span class="op">=</span> {</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bahamas (the)"</span>: <span class="st">"Bahamas, The"</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bolivia (Plurinational State of)"</span>: <span class="st">"Bolivia"</span>,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Cayman Islands (the)"</span>: <span class="st">"Cayman Islands"</span>,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Central African Republic (the)"</span>: <span class="st">"Central African Republic"</span>,</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Comoros (the)"</span>: <span class="st">"Comoros"</span>,</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Congo (the Democratic Republic of the)"</span>: <span class="st">"Congo, Dem. Rep."</span>,</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Congo (the)"</span>: <span class="st">"Congo, Rep."</span>,</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Curaçao"</span>: <span class="st">"Curacao"</span>,</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Côte d'Ivoire"</span>: <span class="st">"Cote d'Ivoire"</span>,</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Dominican Republic (the)"</span>: <span class="st">"Dominican Republic"</span>,</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Egypt"</span>: <span class="st">"Egypt, Arab Rep."</span>,</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Faroe Islands (the)"</span>: <span class="st">"Faroe Islands"</span>,</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Gambia (the)"</span>: <span class="st">"Gambia, The"</span>,</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Hong Kong"</span>: <span class="st">"Hong Kong SAR, China"</span>,</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Iran (Islamic Republic of)"</span>: <span class="st">"Iran, Islamic Rep."</span>,</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Korea (the Republic of)"</span>: <span class="st">"Korea, Rep."</span>,</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Kyrgyzstan"</span>: <span class="st">"Kyrgyz Republic"</span>,</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Lao People's Democratic Republic (the)"</span>: <span class="st">"Lao PDR"</span>,</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Macao"</span>: <span class="st">"Macao SAR, China"</span>,</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Marshall Islands (the)"</span>: <span class="st">"Marshall Islands"</span>,</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Micronesia (Federated States of)"</span>: <span class="st">"Micronesia, Fed. Sts."</span>,</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Moldova (the Republic of)"</span>: <span class="st">"Moldova"</span>,</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Netherlands (the)"</span>: <span class="st">"Netherlands"</span>,</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Niger (the)"</span>: <span class="st">"Niger"</span>,</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Northern Mariana Islands (the)"</span>: <span class="st">"Northern Mariana Islands"</span>,</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Palestine, State of"</span>: <span class="st">"Palestine, State of"</span>,</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Philippines (the)"</span>: <span class="st">"Philippines"</span>,</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Republic of North Macedonia"</span>: <span class="st">"North Macedonia"</span>,</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Russian Federation (the)"</span>: <span class="st">"Russian Federation"</span>,</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Saint Kitts and Nevis"</span>: <span class="st">"St. Kitts and Nevis"</span>,</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Saint Lucia"</span>: <span class="st">"St. Lucia"</span>,</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Saint Martin (French part)"</span>: <span class="st">"St. Martin (French part)"</span>,</span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Saint Vincent and the Grenadines"</span>: <span class="st">"St. Vincent and the Grenadines"</span>,</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Slovakia"</span>: <span class="st">"Slovak Republic"</span>,</span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Sudan (the)"</span>: <span class="st">"Sudan"</span>,</span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Tanzania, United Republic of"</span>: <span class="st">"Tanzania"</span>,</span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Turkey"</span>: <span class="st">"Turkiye"</span>,</span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Turks and Caicos Islands (the)"</span>: <span class="st">"Turks and Caicos Islands"</span>,</span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>    <span class="st">"United Arab Emirates (the)"</span>: <span class="st">"United Arab Emirates"</span>,</span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>    <span class="st">"United Kingdom of Great Britain and Northern Ireland (the)"</span>: <span class="st">"United Kingdom"</span>,</span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>    <span class="st">"United States of America (the)"</span>: <span class="st">"United States"</span>,</span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Venezuela (Bolivarian Republic of)"</span>: <span class="st">"Venezuela, RB"</span>,</span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Yemen"</span>: <span class="st">"Yemen, Rep."</span></span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Process World Bank raw data</span></span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>WB_df <span class="op">=</span> pd.read_csv(raw_data_path)</span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>WB_df.rename(columns<span class="op">=</span>{<span class="st">'Country Name'</span>: <span class="st">'Country'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>WB_df_long <span class="op">=</span> pd.melt(WB_df, id_vars<span class="op">=</span>[<span class="st">'Country'</span>, <span class="st">'Country Code'</span>], </span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>                  var_name<span class="op">=</span><span class="st">'Year'</span>, value_name<span class="op">=</span><span class="st">'Interest payments on external debt (</span><span class="sc">% o</span><span class="st">f GNI)'</span>)</span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>WB_df_long[<span class="st">'Year'</span>] <span class="op">=</span> WB_df_long[<span class="st">'Year'</span>].<span class="bu">str</span>.extract(<span class="st">'(\d+)'</span>)</span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>WB_df_long <span class="op">=</span> WB_df_long.dropna(subset<span class="op">=</span>[<span class="st">'Year'</span>])</span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>WB_df_long[<span class="st">'Year'</span>] <span class="op">=</span> WB_df_long[<span class="st">'Year'</span>].astype(<span class="bu">int</span>)</span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a>WB_df_long.rename(columns<span class="op">=</span>{<span class="st">'Country'</span>: <span class="st">'Country_x'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Add average credit rating</span></span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>credit_df <span class="op">=</span> pd.read_csv(average_credit_rating_path)</span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>code_df <span class="op">=</span> pd.read_csv(country_code_path)[[<span class="st">'Country Name'</span>, <span class="st">'Country Code'</span>]]</span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a>credit_df[<span class="st">'Country'</span>] <span class="op">=</span> credit_df[<span class="st">'Country'</span>].replace(name_mapping)</span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a>credit_df <span class="op">=</span> credit_df.merge(code_df, left_on<span class="op">=</span><span class="st">"Country"</span>, right_on<span class="op">=</span><span class="st">"Country Name"</span>, how<span class="op">=</span><span class="st">"left"</span>)</span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a>credit_df.drop(columns<span class="op">=</span>[<span class="st">"Country Name"</span>], inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a>merged_WB_df_long <span class="op">=</span> WB_df_long.merge(credit_df[[<span class="st">'Country Code'</span>, <span class="st">'Year'</span>, <span class="st">'Average Credit Rating'</span>]], </span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a>                        on<span class="op">=</span>[<span class="st">'Country Code'</span>, <span class="st">'Year'</span>], how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Add continent data</span></span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a>geo_data_gdf <span class="op">=</span> gpd.read_file(shapefile_path)</span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove geometry data to shrink the data size when saving it as csv </span></span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a>geo_data_df <span class="op">=</span> geo_data_gdf[[<span class="st">"ISO_A3_EH"</span>, <span class="st">"CONTINENT"</span>]] </span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>geo_merged_WB_df_long <span class="op">=</span> merged_WB_df_long.merge(geo_data_df, left_on<span class="op">=</span><span class="st">"Country Code"</span>, right_on<span class="op">=</span><span class="st">"ISO_A3_EH"</span>, how<span class="op">=</span><span class="st">"left"</span>)</span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a>geo_merged_WB_df_long.drop(columns<span class="op">=</span>[<span class="st">"ISO_A3_EH"</span>], inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a><span class="co"># Handle undesirable values in interest payments</span></span>
+<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert external debt data to numeric, replacing ".." with NaN</span></span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a>geo_merged_WB_df_long[<span class="st">"Interest payments on external debt (</span><span class="sc">% o</span><span class="st">f GNI)"</span>] <span class="op">=</span> pd.to_numeric(</span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a>    geo_merged_WB_df_long[<span class="st">"Interest payments on external debt (</span><span class="sc">% o</span><span class="st">f GNI)"</span>], errors<span class="op">=</span><span class="st">"coerce"</span></span>
+<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a><span class="co"># Fill missing values with 0</span></span>
+<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a>geo_merged_WB_df_long[<span class="st">"Interest payments on external debt (</span><span class="sc">% o</span><span class="st">f GNI)"</span>].fillna(<span class="dv">0</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the final data</span></span>
+<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a>geo_merged_WB_df_long.to_csv(final_output_path, index<span class="op">=</span><span class="va">False</span>, encoding<span class="op">=</span><span class="st">'utf-8-sig'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="3488897f" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ploting heat map with geodata</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Re-define the dataframe for Africa by loading the CSV created</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>df_africa <span class="op">=</span> pd.read_csv(<span class="st">'data/all_data_verf.csv'</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter data for Africa and the year 2022</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>df_africa_2022 <span class="op">=</span> df_africa[(df_africa[<span class="st">"CONTINENT"</span>] <span class="op">==</span> <span class="st">"Africa"</span>) <span class="op">&amp;</span> (df_africa[<span class="st">"Year"</span>] <span class="op">==</span> <span class="dv">2022</span>)]</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Select geometry and code data from geodata for merging with df_africa_2022</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>selected_gdf <span class="op">=</span> geo_data_gdf[[<span class="st">"ISO_A3_EH"</span>, <span class="st">"geometry"</span>]]</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge shapefile data with CSV data</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>geo_df_africa_2022 <span class="op">=</span> selected_gdf.merge(df_africa_2022, left_on<span class="op">=</span><span class="st">"ISO_A3_EH"</span>, right_on<span class="op">=</span><span class="st">"Country Code"</span>, how<span class="op">=</span><span class="st">"left"</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the map</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">12</span>))</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot data</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>geo_df_africa_2022.plot(</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    column<span class="op">=</span><span class="st">"Interest payments on external debt (</span><span class="sc">% o</span><span class="st">f GNI)"</span>,</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"OrRd"</span>,</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    legend<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    legend_kwds<span class="op">=</span>{<span class="st">"label"</span>: <span class="st">"Interest Payments on External Debt (</span><span class="sc">% o</span><span class="st">f GNI)"</span>},</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    edgecolor<span class="op">=</span><span class="st">"black"</span>,</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    ax<span class="op">=</span>ax,</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Add title and configure display</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Interest Payments on External Debt (</span><span class="sc">% o</span><span class="st">f GNI) in Africa (2022)"</span>, fontsize<span class="op">=</span><span class="dv">15</span>)</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>ax.axis(<span class="st">"off"</span>)</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Write-up_files/figure-html/cell-7-output-1.png" width="867" height="914" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Dynamic Analysis (Shiny App): See py.file in shiny-app</li>
+</ol>
+<ul>
+<li><p>Weighted Average Interest Rates: African countries face a higher average (1.85%) compared to Asian countries (1.53%).</p></li>
+<li><p>Credit Rating Comparison: Within the same credit ratings, African countries consistently pay higher interest rates. For instance, BB-rated African countries face rates near 3%, compared to just over 1% for non-African peers.</p></li>
+</ul>
+<p><img src="pictures/5_app_1.png" class="img-fluid quarto-figure quarto-figure-left" style="width:45.0%"> <img src="pictures/6_app_2.png" class="img-fluid quarto-figure quarto-figure-right" style="width:45.0%"></p>
+</section>
+<section id="policy-recommendations" class="level3">
+<h3 class="anchored" data-anchor-id="policy-recommendations">Policy Recommendations:</h3>
+<ul>
+<li>Rate Reductions: Alleviate financial burdens and allow reallocation of funds toward infrastructure and economic development.</li>
+<li>Targeted Support: IOs should prioritize Africa in their debt relief initiatives.</li>
+</ul>
+</section>
+<section id="challenges" class="level3">
+<h3 class="anchored" data-anchor-id="challenges">Challenges:</h3>
+<ul>
+<li>Data Availability: Inconsistent macro economic data across African countries.</li>
+<li>Analytical Complexity: Difficulty in isolating the effects of external factors, such as commodity price fluctuations and geopolitical issues.</li>
+</ul>
+</section>
+<section id="future-research" class="level3">
+<h3 class="anchored" data-anchor-id="future-research">Future Research:</h3>
+<ul>
+<li>Investigate the relationship between governance indicators and debt-servicing outcomes.</li>
+<li>Conduct case studies on successful debt restructuring in Africa.</li>
+<li>Expand the analysis to include other regions for comparative insights.</li>
+<li>Econometric regression: control other macro-economic factors such as GNI and credit rating to focus on the impact of interest rate.</li>
+<li>Check the negative effect of a reduction/alleviation of interest payment to prevent the moral hazard in African countries and protect the lenders from the risk of loan default.</li>
+</ul>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
